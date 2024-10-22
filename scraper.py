@@ -1,7 +1,12 @@
 from playwright.async_api import async_playwright
 import asyncio
+import pandas as pd
+import os
 
-async def scrape_titles():
+# File to store price history
+PRICE_FILE = 'prices_comparison.csv'
+
+async def scrape_prices():
     async with async_playwright() as p:
         browser = await p.chromium.launch()
         page = await browser.new_page()
@@ -15,7 +20,7 @@ async def scrape_titles():
         await page.click('button:has(span:text("Login"))')
         print("login clicked...")
 
-        #Await login modal and login
+        # Await login modal and login
         await page.wait_for_selector('input[type="email"]')
         print("email input found")
         await page.fill('input[type="email"]', 'testy888777@hotmail.com')  
@@ -34,15 +39,53 @@ async def scrape_titles():
         await page.goto("https://www.apply3d.com/asiga")
         print("Navigated to the Asiga page.")
 
-        
-        # Extract the price spans and print to terminal
+        # Extract the name/price and save to CSV
+        product_names = await page.query_selector_all('p.sNPC28E')
         price_elements = await page.query_selector_all('span.cfpn1d')
 
-        for price in price_elements:
-            price_value = await price.get_attribute('data-wix-price')  
-            print(f"Price found: {price_value.strip()}")  
+        new_prices = []
+        new_product_names = []
+        
+        for name, price in zip(product_names, price_elements):
+            product_name = await name.text_content() 
+            price_value = await price.get_attribute('data-wix-price') 
+
+            if price_value:
+                new_product_names.append(product_name.strip())  # Collect names
+                new_prices.append(price_value.strip())  # Collect prices
+
+        # Check if the price file exists, if not, create it with a header
+        if not os.path.exists(PRICE_FILE):
+            # Create a new DataFrame with columns in the desired order
+            df = pd.DataFrame({
+                "Product Names": new_product_names,
+                "Previous Prices": new_prices,
+                "Current Prices": new_prices
+            })
+            df.to_csv(PRICE_FILE, index=False)
+            print(f"Prices and product names saved to '{PRICE_FILE}'")
+        else:
+            # Load existing prices and compare
+            df = pd.read_csv(PRICE_FILE)
+
+            df['Product Names'] = new_product_names[:len(df)]  
+            df['Previous Prices'] = df['Current Prices']
+            df['Current Prices'] = new_prices[:len(df)]  
+
+            # Handle any new products if length changes
+            if len(new_prices) > len(df):
+                extra_rows = pd.DataFrame({
+                    "Product Names": new_product_names[len(df):],
+                    "Previous Prices": [""] * (len(new_prices) - len(df)),
+                    "Current Prices": new_prices[len(df):]
+                })
+                df = pd.concat([df, extra_rows], ignore_index=True)
+
+            # Save the updated CSV
+            df.to_csv(PRICE_FILE, index=False)
+            print(f"Updated prices and product names saved to '{PRICE_FILE}'")
 
         await browser.close()
 
 if __name__ == "__main__":
-    asyncio.run(scrape_titles())  
+    asyncio.run(scrape_prices())
