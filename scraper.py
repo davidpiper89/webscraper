@@ -34,21 +34,39 @@ async def scrape_prices():
         await page.click('button:has(span.l7_2fn:text("Log In"))')
         print("logged in")
 
-        # Assure login complete and navigate to product page
+        # Navigate to the Asiga page
         await page.wait_for_load_state("networkidle")
         print("Navigating to the Asiga page...")
         await page.goto("https://www.apply3d.com/asiga")
         print("Navigated to the Asiga page.")
 
-        # Extract the name/price and save to CSV
-        product_names = await page.query_selector_all('p.sNPC28E')
-        price_elements = await page.query_selector_all('span.cfpn1d')
-
-        new_prices = []
+        # Extract product names and prices from the Asiga page
         new_product_names = []
+        new_prices = []
         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")  # Current timestamp
-        
-        for name, price in zip(product_names, price_elements):
+
+        # Scrape Asiga products
+        asiga_product_names = await page.query_selector_all('p.sNPC28E')
+        asiga_price_elements = await page.query_selector_all('span.cfpn1d')
+
+        for name, price in zip(asiga_product_names, asiga_price_elements):
+            product_name = await name.text_content() 
+            price_value = await price.get_attribute('data-wix-price') 
+
+            if price_value:
+                new_product_names.append(product_name.strip())  # Collect names
+                new_prices.append(price_value.strip())  # Collect prices
+
+        # Navigate to the BlueCast page
+        print("Navigating to the BlueCast page...")
+        await page.goto("https://www.apply3d.com/bluecast")
+        print("Navigated to the BlueCast page.")
+
+        # Scrape BlueCast products
+        bluecast_product_names = await page.query_selector_all('p.sNPC28E')
+        bluecast_price_elements = await page.query_selector_all('span.cfpn1d')
+
+        for name, price in zip(bluecast_product_names, bluecast_price_elements):
             product_name = await name.text_content() 
             price_value = await price.get_attribute('data-wix-price') 
 
@@ -71,20 +89,22 @@ async def scrape_prices():
             # Load existing prices and compare
             df = pd.read_csv(PRICE_FILE)
 
-            df['Product Names'] = new_product_names[:len(df)]  
-            df['Previous Prices'] = df['Current Prices']
-            df['Previous Timestamp'] = df['Current Timestamp']  
-            df['Current Prices'] = new_prices[:len(df)]  
-            df['Current Timestamp'] = [timestamp] * len(new_prices)  
+            # Update existing rows based on the number of new products
+            num_existing = min(len(df), len(new_product_names))
+            df.loc[:num_existing - 1, 'Product Names'] = new_product_names[:num_existing]
+            df.loc[:num_existing - 1, 'Previous Prices'] = df['Current Prices'][:num_existing]
+            df.loc[:num_existing - 1, 'Previous Timestamp'] = df['Current Timestamp'][:num_existing]
+            df.loc[:num_existing - 1, 'Current Prices'] = new_prices[:num_existing]
+            df.loc[:num_existing - 1, 'Current Timestamp'] = [timestamp] * num_existing
 
             # Handle any new products if length changes
-            if len(new_prices) > len(df):
+            if len(new_product_names) > len(df):
                 extra_rows = pd.DataFrame({
                     "Product Names": new_product_names[len(df):],
-                    "Previous Prices": [""] * (len(new_prices) - len(df)),
-                    "Previous Timestamp": ["" for _ in range(len(new_prices) - len(df))],
+                    "Previous Prices": [""] * (len(new_product_names) - len(df)),
+                    "Previous Timestamp": ["" for _ in range(len(new_product_names) - len(df))],
                     "Current Prices": new_prices[len(df):],
-                    "Current Timestamp": [timestamp] * (len(new_prices) - len(df))  
+                    "Current Timestamp": [timestamp] * (len(new_product_names) - len(df))  
                 })
                 df = pd.concat([df, extra_rows], ignore_index=True)
 
