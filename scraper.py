@@ -2,6 +2,7 @@ from playwright.async_api import async_playwright
 import asyncio
 import pandas as pd
 import os
+from datetime import datetime
 
 # File to store price history
 PRICE_FILE = 'prices_comparison.csv'
@@ -45,6 +46,7 @@ async def scrape_prices():
 
         new_prices = []
         new_product_names = []
+        timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")  # Current timestamp
         
         for name, price in zip(product_names, price_elements):
             product_name = await name.text_content() 
@@ -56,11 +58,12 @@ async def scrape_prices():
 
         # Check if the price file exists, if not, create it with a header
         if not os.path.exists(PRICE_FILE):
-            # Create a new DataFrame with columns in the desired order
             df = pd.DataFrame({
                 "Product Names": new_product_names,
                 "Previous Prices": new_prices,
-                "Current Prices": new_prices
+                "Previous Timestamp": [timestamp] * len(new_prices),  
+                "Current Prices": new_prices,
+                "Current Timestamp": [timestamp] * len(new_prices)  
             })
             df.to_csv(PRICE_FILE, index=False)
             print(f"Prices and product names saved to '{PRICE_FILE}'")
@@ -70,14 +73,18 @@ async def scrape_prices():
 
             df['Product Names'] = new_product_names[:len(df)]  
             df['Previous Prices'] = df['Current Prices']
+            df['Previous Timestamp'] = df['Current Timestamp']  
             df['Current Prices'] = new_prices[:len(df)]  
+            df['Current Timestamp'] = [timestamp] * len(new_prices)  
 
             # Handle any new products if length changes
             if len(new_prices) > len(df):
                 extra_rows = pd.DataFrame({
                     "Product Names": new_product_names[len(df):],
                     "Previous Prices": [""] * (len(new_prices) - len(df)),
-                    "Current Prices": new_prices[len(df):]
+                    "Previous Timestamp": ["" for _ in range(len(new_prices) - len(df))],
+                    "Current Prices": new_prices[len(df):],
+                    "Current Timestamp": [timestamp] * (len(new_prices) - len(df))  
                 })
                 df = pd.concat([df, extra_rows], ignore_index=True)
 
