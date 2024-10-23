@@ -12,11 +12,11 @@ async def scrape_prices():
         browser = await p.chromium.launch()
         page = await browser.new_page()
         await page.goto("https://www.apply3d.com/")
-        
+
         # Wait for the page to load
-        await page.wait_for_load_state("networkidle")  
+        await page.wait_for_load_state("networkidle")
         print("Waiting for login button...")
-        
+
         # Click the login button
         await page.click('button:has(span:text("Login"))')
         print("login clicked...")
@@ -24,12 +24,12 @@ async def scrape_prices():
         # Await login modal and login
         await page.wait_for_selector('input[type="email"]')
         print("email input found")
-        await page.fill('input[type="email"]', 'testy888777@hotmail.com')  
+        await page.fill('input[type="email"]', 'testy888777@hotmail.com')
         print("Email filled in successfully.")
         print("Waiting for password input...")
-        await page.wait_for_selector('input[type="password"]')  
+        await page.wait_for_selector('input[type="password"]')
         print("Filling in password...")
-        await page.fill('input[type="password"]', 'Breadboard99')  
+        await page.fill('input[type="password"]', 'Breadboard99')
         print("Password filled in successfully.")
         await page.click('button:has(span.l7_2fn:text("Log In"))')
         print("logged in")
@@ -50,8 +50,8 @@ async def scrape_prices():
         asiga_price_elements = await page.query_selector_all('span.cfpn1d')
 
         for name, price in zip(asiga_product_names, asiga_price_elements):
-            product_name = await name.text_content() 
-            price_value = await price.get_attribute('data-wix-price') 
+            product_name = await name.text_content()
+            price_value = await price.get_attribute('data-wix-price')
 
             if price_value:
                 new_product_names.append(product_name.strip())  # Collect names
@@ -67,8 +67,8 @@ async def scrape_prices():
         bluecast_price_elements = await page.query_selector_all('span.cfpn1d')
 
         for name, price in zip(bluecast_product_names, bluecast_price_elements):
-            product_name = await name.text_content() 
-            price_value = await price.get_attribute('data-wix-price') 
+            product_name = await name.text_content()
+            price_value = await price.get_attribute('data-wix-price')
 
             if price_value:
                 new_product_names.append(product_name.strip())  # Collect names
@@ -79,15 +79,39 @@ async def scrape_prices():
             df = pd.DataFrame({
                 "Product Names": new_product_names,
                 "Previous Prices": new_prices,
-                "Previous Timestamp": [timestamp] * len(new_prices),  
+                "Previous Timestamp": [timestamp] * len(new_prices),
                 "Current Prices": new_prices,
-                "Current Timestamp": [timestamp] * len(new_prices)  
+                "Current Timestamp": [timestamp] * len(new_prices)
             })
             df.to_csv(PRICE_FILE, index=False)
             print(f"Prices and product names saved to '{PRICE_FILE}'")
         else:
             # Load existing prices and compare
             df = pd.read_csv(PRICE_FILE)
+
+            # Create a set of current and previous products
+            prev_product_names = set(df["Product Names"])
+            current_product_names = set(new_product_names)
+
+            # Identify new products
+            new_products = current_product_names - prev_product_names
+            for i, name in enumerate(new_product_names):
+                if name in new_products:
+                    new_product_names[i] += " (NEW)"
+
+            # Identify missing products
+            missing_products = prev_product_names - current_product_names
+            for missing_product in missing_products:
+                missing_index = df[df["Product Names"] == missing_product].index[0]
+
+                # Check if product was already marked as "not on site"
+                if df.loc[missing_index, "Current Prices"] == "(not on site)":
+                    df.loc[missing_index, "Previous Prices"] = "(not on site)"
+                    df.loc[missing_index, "Current Prices"] = "(not on site)"
+                else:
+                    df.loc[missing_index, "Previous Prices"] = df.loc[missing_index, "Current Prices"]
+                    df.loc[missing_index, "Current Prices"] = "(not on site)"
+                df.loc[missing_index, "Current Timestamp"] = timestamp
 
             # Update existing rows based on the number of new products
             num_existing = min(len(df), len(new_product_names))
@@ -104,7 +128,7 @@ async def scrape_prices():
                     "Previous Prices": [""] * (len(new_product_names) - len(df)),
                     "Previous Timestamp": ["" for _ in range(len(new_product_names) - len(df))],
                     "Current Prices": new_prices[len(df):],
-                    "Current Timestamp": [timestamp] * (len(new_product_names) - len(df))  
+                    "Current Timestamp": [timestamp] * (len(new_product_names) - len(df))
                 })
                 df = pd.concat([df, extra_rows], ignore_index=True)
 
