@@ -4,6 +4,7 @@ import pandas as pd
 import os
 from datetime import datetime
 
+
 # File to store price history
 PRICE_FILE = 'prices_comparison.csv'
 
@@ -412,7 +413,7 @@ async def scrape_prices():
             for missing_product in missing_products:
                 missing_index = df[df["Product Names"] == missing_product].index[0]
                 # Update the current price to "(not on site)"
-                df.loc[missing_index, "Current Prices"] = "(not on site)"
+                df.loc[missing_index, "Current Prices"] = "(NOT ON SITE)"
                 df.loc[missing_index, "Current Timestamp"] = timestamp
 
             # Update current prices with the new scrape for existing products
