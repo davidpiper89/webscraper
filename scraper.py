@@ -45,7 +45,6 @@ async def scrape_prices():
         await page.goto("https://www.apply3d.com/asiga")
         print("Navigated to the Asiga page.")
         await page.wait_for_load_state("networkidle")
-        await page.wait_for_timeout(5000)
 
         # Scrape Asiga products
         asiga_products = await page.query_selector_all('li[data-hook="product-list-grid-item"]')
@@ -54,56 +53,334 @@ async def scrape_prices():
             # Extract product name
             name_element = await product.query_selector('p[data-hook="product-item-name"]')
             product_name = await name_element.text_content() if name_element else "No Name"
-            
-            # Try to find the standard price
+
+            # Check if the product is out of stock
+            out_of_stock_element = await product.query_selector('span[data-hook="product-item-out-of-stock"]')
+            if out_of_stock_element:
+                # If the product is out of stock, use the text "Out of stock" instead of a price
+                price_value = await out_of_stock_element.text_content()
+            else:
+                # If in stock, try to get the standard price
+                price_element = await product.query_selector('span[data-hook="product-item-price-to-pay"]')
+                
+                # If standard price not found, check for the "From" price range
+                if not price_element:
+                    price_element = await product.query_selector('span[data-hook="price-range-from"]')
+                
+                # Extract price if found
+                price_value = await price_element.text_content() if price_element else None
+
+            # Append product name and price (or "Out of stock" text) to the lists
+            if price_value:
+                product_names.append(product_name.strip())
+                prices.append(price_value.strip())
+              
+        print("Navigating to Asiga page 2...")
+        await page.goto("https://www.apply3d.com/asiga?page=2")
+        print("Navigated to Asiga page 2.")   
+        await page.wait_for_load_state("networkidle")    
+
+        # Scrape Asiga products page 2
+        asiga_page2_products = await page.query_selector_all('li[data-hook="product-list-grid-item"]')
+
+        for product in asiga_page2_products:
+            # Extract product name
+            name_element = await product.query_selector('p[data-hook="product-item-name"]')
+            product_name = await name_element.text_content() if name_element else "No Name"
+
+            # Check if the product is out of stock
+            out_of_stock_element = await product.query_selector('span[data-hook="product-item-out-of-stock"]')
+            if out_of_stock_element:
+                # If the product is out of stock, use the text "Out of stock" instead of a price
+                price_value = await out_of_stock_element.text_content()
+            else:
+                # If in stock, try to get the standard price
+                price_element = await product.query_selector('span[data-hook="product-item-price-to-pay"]')
+                
+                # If standard price not found, check for the "From" price range
+                if not price_element:
+                    price_element = await product.query_selector('span[data-hook="price-range-from"]')
+                
+                # Extract price if found
+                price_value = await price_element.text_content() if price_element else None
+
+            # Append product name and price (or "Out of stock" text) to the lists
+            if price_value:
+                product_names.append(product_name.strip())
+                prices.append(price_value.strip())
+
+        # Navigate to the BlueCast page
+        print("Navigating to the BlueCast page...")
+        await page.goto("https://www.apply3d.com/bluecast")
+        print("Navigated to the BlueCast page.")
+        await page.wait_for_load_state("networkidle")    
+
+        # Scrape BlueCast products
+        bluecast_products = await page.query_selector_all('li[data-hook="product-list-grid-item"]')
+
+        for product in bluecast_products:
+            # Extract product name
+            name_element = await product.query_selector('p[data-hook="product-item-name"]')
+            product_name = await name_element.text_content() if name_element else "No Name"
+
+            # Check if the product is out of stock
+            out_of_stock_element = await product.query_selector('span[data-hook="product-item-out-of-stock"]')
+            if out_of_stock_element:
+                # If the product is out of stock, use the text "Out of stock" instead of a price
+                price_value = await out_of_stock_element.text_content()
+            else:
+                # If in stock, try to get the standard price
+                price_element = await product.query_selector('span[data-hook="product-item-price-to-pay"]')
+                
+                # If standard price not found, check for the "From" price range
+                if not price_element:
+                    price_element = await product.query_selector('span[data-hook="price-range-from"]')
+                
+                # Extract price if found
+                price_value = await price_element.text_content() if price_element else None
+
+            # Append product name and price (or "Out of stock" text) to the lists
+            if price_value:
+                product_names.append(product_name.strip())
+                prices.append(price_value.strip())
+
+        # Navigate to the Detax page
+        print("Navigating to the Detax page...")
+        await page.goto("https://www.apply3d.com/detax")
+        print("Navigated to the Detax page.")
+        await page.wait_for_load_state("networkidle")   
+
+        # Scrape Detax products
+        detax_products = await page.query_selector_all('li[data-hook="product-list-grid-item"]')
+
+        for product in detax_products:
+            # Extract product name
+            name_element = await product.query_selector('p[data-hook="product-item-name"]')
+            product_name = await name_element.text_content() if name_element else "No Name"
+
+            # Check if the product is out of stock
+            out_of_stock_element = await product.query_selector('span[data-hook="product-item-out-of-stock"]')
+            if out_of_stock_element:
+                # If the product is out of stock, use the text "Out of stock" instead of a price
+                price_value = await out_of_stock_element.text_content()
+            else:
+                # If in stock, try to get the standard price
+                price_element = await product.query_selector('span[data-hook="product-item-price-to-pay"]')
+                
+                # If standard price not found, check for the "From" price range
+                if not price_element:
+                    price_element = await product.query_selector('span[data-hook="price-range-from"]')
+                
+                # Extract price if found
+                price_value = await price_element.text_content() if price_element else None
+
+            # Append product name and price (or "Out of stock" text) to the lists
+            if price_value:
+                product_names.append(product_name.strip())
+                prices.append(price_value.strip())
+
+        # Navigate to the Keyprint page
+        print("Navigating to the Keyprint page...")
+        await page.goto("https://www.apply3d.com/keyprint")
+        print("Navigated to the Keyprint page.")
+        await page.wait_for_load_state("networkidle")    
+        
+        # Scrape Keyprint products
+        keyprint_products = await page.query_selector_all('li[data-hook="product-list-grid-item"]')
+
+        for product in keyprint_products:
+            # Extract product name
+            name_element = await product.query_selector('p[data-hook="product-item-name"]')
+            product_name = await name_element.text_content() if name_element else "No Name"
+
+            # Check if the product is out of stock
+            out_of_stock_element = await product.query_selector('span[data-hook="product-item-out-of-stock"]')
+            if out_of_stock_element:
+                # If the product is out of stock, use the text "Out of stock" instead of a price
+                price_value = await out_of_stock_element.text_content()
+            else:
+                # If in stock, try to get the standard price
+                price_element = await product.query_selector('span[data-hook="product-item-price-to-pay"]')
+                
+                # If standard price not found, check for the "From" price range
+                if not price_element:
+                    price_element = await product.query_selector('span[data-hook="price-range-from"]')
+                
+                # Extract price if found
+                price_value = await price_element.text_content() if price_element else None
+
+            # Append product name and price (or "Out of stock" text) to the lists
+            if price_value:
+                product_names.append(product_name.strip())
+                prices.append(price_value.strip())
+
+        # Navigate to the Loctite page
+        print("Navigating to the Loctite page...")
+        await page.goto("https://www.apply3d.com/loctite")
+        print("Navigated to the Loctite page.")
+        await page.wait_for_load_state("networkidle")    
+        
+        # Scrape Loctite products
+        loctite_products = await page.query_selector_all('li[data-hook="product-list-grid-item"]')
+
+        for product in loctite_products:
+            # Extract product name
+            name_element = await product.query_selector('p[data-hook="product-item-name"]')
+            product_name = await name_element.text_content() if name_element else "No Name"
+
             price_element = await product.query_selector('span[data-hook="product-item-price-to-pay"]')
-            
+
             # If standard price not found, check for the "From" price range
             if not price_element:
                 price_element = await product.query_selector('span[data-hook="price-range-from"]')
 
-            # Extract price if found
+             # Extract price if found
             if price_element:
                 price_value = await price_element.text_content()
                 if price_value :
                     # Append product name and price to the lists
                     product_names.append(product_name.strip())
                     prices.append(price_value.strip())
-              
-
-        await page.goto("https://www.apply3d.com/asiga?page=2")
-        print("Navigated to the Asiga page 2.")   
+ 
+        # Navigate to the NKOptik page
+        print("Navigating to the NKOptik page...")
+        await page.goto("https://www.apply3d.com/nk-optik")
+        print("Navigated to the NKOptik page.")
         await page.wait_for_load_state("networkidle")    
-
-        # Scrape Asiga products page 2
-        asiga_product_names = await page.query_selector_all('p.sNPC28E')
-        asiga_price_elements = await page.query_selector_all('span.cfpn1d')
-
-        for name, price in zip(asiga_product_names, asiga_price_elements):
-            product_name = await name.text_content()
-            price_value = await price.get_attribute('data-wix-price')
-
-            if price_value:
-                product_names.append(product_name.strip())  
-                prices.append(price_value.strip())   
         
+        # Scrape NKOptik products
+        nkoptik_products = await page.query_selector_all('li[data-hook="product-list-grid-item"]')
 
-        # Navigate to the BlueCast page
-        print("Navigating to the BlueCast page...")
-        await page.goto("https://www.apply3d.com/bluecast")
-        print("Navigated to the BlueCast page.")
+        for product in nkoptik_products:
+            # Extract product name
+            name_element = await product.query_selector('p[data-hook="product-item-name"]')
+            product_name = await name_element.text_content() if name_element else "No Name"
 
-        # Scrape BlueCast products
-        bluecast_product_names = await page.query_selector_all('p.sNPC28E')
-        bluecast_price_elements = await page.query_selector_all('span.cfpn1d')
+            # Check if the product is out of stock
+            out_of_stock_element = await product.query_selector('span[data-hook="product-item-out-of-stock"]')
+            if out_of_stock_element:
+                # If the product is out of stock, use the text "Out of stock" instead of a price
+                price_value = await out_of_stock_element.text_content()
+            else:
+                # If in stock, try to get the standard price
+                price_element = await product.query_selector('span[data-hook="product-item-price-to-pay"]')
+                
+                # If standard price not found, check for the "From" price range
+                if not price_element:
+                    price_element = await product.query_selector('span[data-hook="price-range-from"]')
+                
+                # Extract price if found
+                price_value = await price_element.text_content() if price_element else None
 
-        for name, price in zip(bluecast_product_names, bluecast_price_elements):
-            product_name = await name.text_content()
-            price_value = await price.get_attribute('data-wix-price')
-
+            # Append product name and price (or "Out of stock" text) to the lists
             if price_value:
-                product_names.append(product_name.strip())  
-                prices.append(price_value.strip())  
+                product_names.append(product_name.strip())
+                prices.append(price_value.strip())
+
+        # Navigate to the Phrozen page
+        print("Navigating to the Phrozen page...")
+        await page.goto("https://www.apply3d.com/phrozen")
+        print("Navigated to the Phrozen page.")
+        await page.wait_for_load_state("networkidle")    
+        
+        # Scrape Phrozen products
+        phrozen_products = await page.query_selector_all('li[data-hook="product-list-grid-item"]')
+
+        for product in phrozen_products:
+            # Extract product name
+            name_element = await product.query_selector('p[data-hook="product-item-name"]')
+            product_name = await name_element.text_content() if name_element else "No Name"
+
+            # Check if the product is out of stock
+            out_of_stock_element = await product.query_selector('span[data-hook="product-item-out-of-stock"]')
+            if out_of_stock_element:
+                # If the product is out of stock, use the text "Out of stock" instead of a price
+                price_value = await out_of_stock_element.text_content()
+            else:
+                # If in stock, try to get the standard price
+                price_element = await product.query_selector('span[data-hook="product-item-price-to-pay"]')
+                
+                # If standard price not found, check for the "From" price range
+                if not price_element:
+                    price_element = await product.query_selector('span[data-hook="price-range-from"]')
+                
+                # Extract price if found
+                price_value = await price_element.text_content() if price_element else None
+
+            # Append product name and price (or "Out of stock" text) to the lists
+            if price_value:
+                product_names.append(product_name.strip())
+                prices.append(price_value.strip())
+
+        # Navigate to the Phrozen page 2
+        print("Navigating to the Phrozen page 2...")
+        await page.goto("https://www.apply3d.com/phrozen?page=2")
+        print("Navigated to the Phrozen page 2.")
+        await page.wait_for_load_state("networkidle")    
+        
+        # Scrape Phrozen page 2 products
+        phrozen_page2_products = await page.query_selector_all('li[data-hook="product-list-grid-item"]')
+
+        for product in phrozen_page2_products:
+            # Extract product name
+            name_element = await product.query_selector('p[data-hook="product-item-name"]')
+            product_name = await name_element.text_content() if name_element else "No Name"
+
+            # Check if the product is out of stock
+            out_of_stock_element = await product.query_selector('span[data-hook="product-item-out-of-stock"]')
+            if out_of_stock_element:
+                # If the product is out of stock, use the text "Out of stock" instead of a price
+                price_value = await out_of_stock_element.text_content()
+            else:
+                # If in stock, try to get the standard price
+                price_element = await product.query_selector('span[data-hook="product-item-price-to-pay"]')
+                
+                # If standard price not found, check for the "From" price range
+                if not price_element:
+                    price_element = await product.query_selector('span[data-hook="price-range-from"]')
+                
+                # Extract price if found
+                price_value = await price_element.text_content() if price_element else None
+
+            # Append product name and price (or "Out of stock" text) to the lists
+            if price_value:
+                product_names.append(product_name.strip())
+                prices.append(price_value.strip())
+ 
+        # Navigate to the Saremco page
+        print("Navigating to the Saremco...")
+        await page.goto("https://www.apply3d.com/saremco")
+        print("Navigated to the Saremco.")
+        await page.wait_for_load_state("networkidle")    
+        
+        # Scrape Saremco products
+        saremco_products = await page.query_selector_all('li[data-hook="product-list-grid-item"]')
+
+        for product in saremco_products:
+            # Extract product name
+            name_element = await product.query_selector('p[data-hook="product-item-name"]')
+            product_name = await name_element.text_content() if name_element else "No Name"
+
+            # Check if the product is out of stock
+            out_of_stock_element = await product.query_selector('span[data-hook="product-item-out-of-stock"]')
+            if out_of_stock_element:
+                # If the product is out of stock, use the text "Out of stock" instead of a price
+                price_value = await out_of_stock_element.text_content()
+            else:
+                # If in stock, try to get the standard price
+                price_element = await product.query_selector('span[data-hook="product-item-price-to-pay"]')
+                
+                # If standard price not found, check for the "From" price range
+                if not price_element:
+                    price_element = await product.query_selector('span[data-hook="price-range-from"]')
+                
+                # Extract price if found
+                price_value = await price_element.text_content() if price_element else None
+
+            # Append product name and price (or "Out of stock" text) to the lists
+            if price_value:
+                product_names.append(product_name.strip())
+                prices.append(price_value.strip())
 
         # Check if the price file exists, if not, create it with a header
         if not os.path.exists(PRICE_FILE):
