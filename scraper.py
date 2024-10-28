@@ -45,7 +45,7 @@ async def scrape_prices():
         print("Navigating to the Asiga page...")
         await page.goto("https://www.apply3d.com/asiga")
         print("Navigated to the Asiga page.")
-        await page.wait_for_load_state("networkidle")
+        await page.wait_for_load_state("domcontentloaded")
 
         # Scrape Asiga products
         asiga_products = await page.query_selector_all('li[data-hook="product-list-grid-item"]')
@@ -79,7 +79,7 @@ async def scrape_prices():
         print("Navigating to Asiga page 2...")
         await page.goto("https://www.apply3d.com/asiga?page=2")
         print("Navigated to Asiga page 2.")   
-        await page.wait_for_load_state("networkidle")    
+        await page.wait_for_load_state("domcontentloaded") 
 
         # Scrape Asiga products page 2
         asiga_page2_products = await page.query_selector_all('li[data-hook="product-list-grid-item"]')
@@ -114,7 +114,7 @@ async def scrape_prices():
         print("Navigating to the BlueCast page...")
         await page.goto("https://www.apply3d.com/bluecast")
         print("Navigated to the BlueCast page.")
-        await page.wait_for_load_state("networkidle")    
+        await page.wait_for_load_state("domcontentloaded")  
 
         # Scrape BlueCast products
         bluecast_products = await page.query_selector_all('li[data-hook="product-list-grid-item"]')
@@ -149,7 +149,7 @@ async def scrape_prices():
         print("Navigating to the Detax page...")
         await page.goto("https://www.apply3d.com/detax")
         print("Navigated to the Detax page.")
-        await page.wait_for_load_state("networkidle")   
+        await page.wait_for_load_state("domcontentloaded")
 
         # Scrape Detax products
         detax_products = await page.query_selector_all('li[data-hook="product-list-grid-item"]')
@@ -184,7 +184,7 @@ async def scrape_prices():
         print("Navigating to the Keyprint page...")
         await page.goto("https://www.apply3d.com/keyprint")
         print("Navigated to the Keyprint page.")
-        await page.wait_for_load_state("networkidle")    
+        await page.wait_for_load_state("domcontentloaded")   
         
         # Scrape Keyprint products
         keyprint_products = await page.query_selector_all('li[data-hook="product-list-grid-item"]')
@@ -219,7 +219,7 @@ async def scrape_prices():
         print("Navigating to the Loctite page...")
         await page.goto("https://www.apply3d.com/loctite")
         print("Navigated to the Loctite page.")
-        await page.wait_for_load_state("networkidle")    
+        await page.wait_for_load_state("domcontentloaded") 
         
         # Scrape Loctite products
         loctite_products = await page.query_selector_all('li[data-hook="product-list-grid-item"]')
@@ -247,7 +247,7 @@ async def scrape_prices():
         print("Navigating to the NKOptik page...")
         await page.goto("https://www.apply3d.com/nk-optik")
         print("Navigated to the NKOptik page.")
-        await page.wait_for_load_state("networkidle")    
+        await page.wait_for_load_state("domcontentloaded")  
         
         # Scrape NKOptik products
         nkoptik_products = await page.query_selector_all('li[data-hook="product-list-grid-item"]')
@@ -317,7 +317,7 @@ async def scrape_prices():
         print("Navigating to the Phrozen page 2...")
         await page.goto("https://www.apply3d.com/phrozen?page=2")
         print("Navigated to the Phrozen page 2.")
-        await page.wait_for_load_state("networkidle")    
+        await page.wait_for_load_state("domcontentloaded")
         
         # Scrape Phrozen page 2 products
         phrozen_page2_products = await page.query_selector_all('li[data-hook="product-list-grid-item"]')
@@ -352,7 +352,7 @@ async def scrape_prices():
         print("Navigating to the Saremco...")
         await page.goto("https://www.apply3d.com/saremco")
         print("Navigated to the Saremco.")
-        await page.wait_for_load_state("networkidle")    
+        await page.wait_for_load_state("domcontentloaded") 
         
         # Scrape Saremco products
         saremco_products = await page.query_selector_all('li[data-hook="product-list-grid-item"]')
