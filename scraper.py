@@ -8,6 +8,7 @@ from datetime import datetime
 # File to store price history
 PRICE_FILE = 'prices_comparison.csv'
 
+
 async def scrape_prices():
     async with async_playwright() as p:
         browser = await p.chromium.launch()
@@ -35,6 +36,9 @@ async def scrape_prices():
         await page.click('button:has(span.l7_2fn:text("Log In"))')
         print("logged in")
 
+        # Product pages with from prices
+        product_from_price_pages = []
+
         # Extract product names and prices from all pages
         product_names = []
         prices = []
@@ -47,7 +51,7 @@ async def scrape_prices():
         print("Navigated to the Asiga page.")
         await page.wait_for_load_state("domcontentloaded")
 
-        # Scrape Asiga products
+        # Scrape Asiga products with no from price
         asiga_products = await page.query_selector_all('li[data-hook="product-list-grid-item"]')
 
         for product in asiga_products:
@@ -55,33 +59,46 @@ async def scrape_prices():
             name_element = await product.query_selector('p[data-hook="product-item-name"]')
             product_name = await name_element.text_content() if name_element else "No Name"
 
+            # Initialize price variables
+            price_value = None
+
             # Check if the product is out of stock
             out_of_stock_element = await product.query_selector('span[data-hook="product-item-out-of-stock"]')
             if out_of_stock_element:
-                # If the product is out of stock, use the text "Out of stock" instead of a price
+                # Out of stock: add "Out of stock" as price
                 price_value = await out_of_stock_element.text_content()
+                product_name += " - Out of stock"
             else:
-                # If in stock, try to get the standard price
+                # Try to get the standard price if in stock
                 price_element = await product.query_selector('span[data-hook="product-item-price-to-pay"]')
                 
-                # If standard price not found, check for the "From" price range
-                if not price_element:
-                    price_element = await product.query_selector('span[data-hook="price-range-from"]')
-                
-                # Extract price if found
-                price_value = await price_element.text_content() if price_element else None
+                if price_element:
+                    # Found standard price
+                    price_value = await price_element.text_content()
+                else:
+                    # No standard price found, check for "From" price
+                    from_price_element = await product.query_selector('span[data-hook="price-range-from"]')
+                    
+                    if from_price_element:
+                        # From price found, add product link to `product_from_price_pages`
+                        anchor = await product.query_selector('a[data-hook="product-item-product-details-link"]')
+                        product_link = await anchor.get_attribute('href') if anchor else None
+                        if product_link:
+                            product_from_price_pages.append(product_link.strip())
 
-            # Append product name and price (or "Out of stock" text) to the lists
+            # Append product name and price if we have a price value
             if price_value:
                 product_names.append(product_name.strip())
                 prices.append(price_value.strip())
-              
+
+
+        # Repeat the process for Asiga page 2
         print("Navigating to Asiga page 2...")
         await page.goto("https://www.apply3d.com/asiga?page=2")
-        print("Navigated to Asiga page 2.")   
+        print("Navigated to Asiga page 2.")
         await page.wait_for_load_state("domcontentloaded") 
 
-        # Scrape Asiga products page 2
+        # Scrape Asiga products on page 2
         asiga_page2_products = await page.query_selector_all('li[data-hook="product-list-grid-item"]')
 
         for product in asiga_page2_products:
@@ -89,26 +106,40 @@ async def scrape_prices():
             name_element = await product.query_selector('p[data-hook="product-item-name"]')
             product_name = await name_element.text_content() if name_element else "No Name"
 
+            # Initialize price variables
+            price_value = None
+
             # Check if the product is out of stock
             out_of_stock_element = await product.query_selector('span[data-hook="product-item-out-of-stock"]')
             if out_of_stock_element:
-                # If the product is out of stock, use the text "Out of stock" instead of a price
+                # Out of stock: add "Out of stock" as price
                 price_value = await out_of_stock_element.text_content()
+                product_name += " - Out of stock"
             else:
-                # If in stock, try to get the standard price
+                # Try to get the standard price if in stock
                 price_element = await product.query_selector('span[data-hook="product-item-price-to-pay"]')
                 
-                # If standard price not found, check for the "From" price range
-                if not price_element:
-                    price_element = await product.query_selector('span[data-hook="price-range-from"]')
-                
-                # Extract price if found
-                price_value = await price_element.text_content() if price_element else None
+                if price_element:
+                    # Found standard price
+                    price_value = await price_element.text_content()
+                else:
+                    # No standard price found, check for "From" price
+                    from_price_element = await product.query_selector('span[data-hook="price-range-from"]')
+                    
+                    if from_price_element:
+                        # From price found, add product link to `product_from_price_pages`
+                        price_value = await from_price_element.text_content()
+                        anchor = await product.query_selector('a[data-hook="product-item-container"]')
+                        product_link = await anchor.get_attribute('href') if anchor else None
+                        
+                        if product_link:
+                            product_from_price_pages.append(product_link.strip())
 
-            # Append product name and price (or "Out of stock" text) to the lists
+            # Append product name and price if we have a price value
             if price_value:
                 product_names.append(product_name.strip())
                 prices.append(price_value.strip())
+
 
         # Navigate to the BlueCast page
         print("Navigating to the BlueCast page...")
@@ -382,6 +413,62 @@ async def scrape_prices():
             if price_value:
                 product_names.append(product_name.strip())
                 prices.append(price_value.strip())
+        
+        # Navigate through from pages and get product range and price
+        for product_page in product_from_price_pages:
+            # Navigate to individual page
+            print("Navigating to", product_page)
+            await page.goto(product_page)
+            await page.wait_for_load_state("networkidle") 
+            await page.wait_for_load_state("domcontentloaded") 
+            print("DOM loaded")
+
+            # Handle banner if present
+            try:
+                await page.wait_for_selector('button[data-hook="consent-banner-apply-button"]', timeout=5000)
+                print("Banner found")
+                await page.click('button[data-hook="consent-banner-apply-button"]')
+                print("Banner clicked")
+            except:
+                print("Banner not found")
+
+            # Get product name
+            name_element = await page.query_selector('h1[data-hook="product-title"]')
+            product_name = await name_element.text_content() if name_element else "No Name"
+
+            # Navigate the dropdown button
+            dropdown_button = await page.query_selector('button[data-hook="dropdown-base"]')
+            if dropdown_button:
+                print("Dropdown button found.")
+                
+                await page.evaluate('(element) => element.click()', dropdown_button)
+                print("Dropdown button clicked via JavaScript.")
+                
+                # Get all dropdown options within the container
+                container = await page.query_selector('div#dropdown-options-container_-1')
+                if container:
+                    options = await container.query_selector_all('div[data-hook="option"]')
+                    print("Dropdown options found:", len(options))
+                    
+                    for option in options:
+                        await page.evaluate('(element) => element.click()', option)
+                        print("Clicked option via JavaScript:", option)
+                        
+                        await page.wait_for_load_state("networkidle")
+                        await page.wait_for_load_state("domcontentloaded")
+                        
+                        # Extract sub-name and price from the current option
+                        sub_name_element = await option.query_selector('span.sNipX2_') 
+                        sub_name = await sub_name_element.text_content() if sub_name_element else "No Sub Name"
+                        print("Sub name found:", sub_name)
+                        
+                        price_element = await option.query_selector('span[data-hook="formatted-primary-price"]')
+                        price_value = await price_element.text_content() if price_element else "No Price"
+                        print("Price found:", price_value)
+                        
+                        # Append the product name, sub-name, and price
+                        product_names.append((product_name.strip(), sub_name.strip()))
+                        prices.append(price_value.strip())
 
         # Check if the price file exists, if not, create it with a header
         if not os.path.exists(PRICE_FILE):
