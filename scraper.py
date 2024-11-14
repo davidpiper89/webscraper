@@ -9,15 +9,16 @@ PRICE_FILE = 'prices_comparison.csv'
 
 # List of product page URLs to scrape
 PRODUCT_PAGES = [
-    "https://www.apply3d.com/asiga",
+    # "https://www.apply3d.com/asiga",
     # "https://www.apply3d.com/asiga?page=2",
     # "https://www.apply3d.com/bluecast",
-    # "https://www.apply3d.com/detax",
+    "https://www.apply3d.com/detax",
     # "https://www.apply3d.com/keyprint",
     # "https://www.apply3d.com/loctite",
     # "https://www.apply3d.com/nk-optik",
     # "https://www.apply3d.com/phrozen",
     # "https://www.apply3d.com/phrozen?page=2",
+    # "https://www.apply3d.com/saremco"
 ]
 
 async def login(page, email, password):
@@ -89,7 +90,7 @@ async def scrape_prices():
         await browser.close()
 
 async def process_price_ranges(page, product_pages, names, prices):
-    """Processes individual product pages that have a price range."""
+    """Processes individual product pages that have one or two dropdowns for price ranges."""
     for product_page in product_pages:
         print("Navigating to", product_page)
         await page.goto(product_page)
@@ -99,11 +100,13 @@ async def process_price_ranges(page, product_pages, names, prices):
         name_element = await page.query_selector('h1[data-hook="product-title"]')
         product_name = await name_element.text_content() if name_element else "No Name"
         
-        dropdown_button = await page.query_selector('button[data-hook="dropdown-base"]')
-        if dropdown_button:
-            await handle_dropdown(page, dropdown_button, names, prices, retries=3) 
-
-
+        dropdown_buttons = await page.query_selector_all('button[data-hook="dropdown-base"]')
+        if dropdown_buttons:
+            if len(dropdown_buttons) == 1:
+                await handle_single_dropdown(page, dropdown_buttons[0], names, product_name, prices, retries=10)
+            elif len(dropdown_buttons) >= 2:
+                await handle_two_dropdowns(page, dropdown_buttons, names, product_name, prices, retries=10)
+                
 async def close_banner_if_present(page):
     """Closes a consent banner if present on the page."""
     try:
@@ -114,70 +117,188 @@ async def close_banner_if_present(page):
     except:
         print("Banner not found")
 
-async def handle_dropdown(page, dropdown_button, names, prices, retries):
-    """Handles dropdown interaction and retrieves prices for each option, with retry on failure."""
-    print("Handling dropdown")
+async def find_container_id(page, dropdown_button):
+    """Find the appropriate container ID on the page by checking a range of IDs."""
+    used_ids = set()
+    
+    # Open the dropdown menu to reveal the container options
+    await page.evaluate('(element) => element.click()', dropdown_button)
+    await page.wait_for_load_state('load')
+    await page.wait_for_timeout(1000)
+    
+    # Define a range of possible container IDs and check each one
+    for i in range(1, 21):
+        if i in used_ids:
+            continue
+        container_id = f"#dropdown-options-container_-{i}"
+        # Skip if this container ID was already used
+        
+        container = await page.query_selector(container_id)
+        
+        if container:
+            print(f"Container found with ID: {container_id}")
+            used_ids.add(i) 
+            await page.evaluate('(element) => element.click()', dropdown_button)
+            await page.wait_for_load_state('load')
+            await page.wait_for_timeout(1000)
+            return container_id  
+    await page.evaluate('(element) => element.click()', dropdown_button)
+    await page.wait_for_load_state('load')
+    await page.wait_for_timeout(1000)
+    print("No appropriate container ID found.")
+    return None
+
+async def handle_single_dropdown(page, dropdown_button, names, product_name, prices, retries):
+    """Handles interaction with a single dropdown by selecting options based on title."""
+    print("Handling single dropdown")
 
     try:
-        # Open the dropdown menu
+        # Find the correct container ID
+        container_id = await find_container_id(page, dropdown_button)
         await page.evaluate('(element) => element.click()', dropdown_button)
+        await page.wait_for_load_state('load')
         await page.wait_for_timeout(1000)
-
-        # Look for the dropdown options container
-        container = await page.query_selector('div#dropdown-options-container_-1')
-        if container:
-            print("Container found")
+        if container_id:
+            container = await page.query_selector(container_id)
             options = await container.query_selector_all('div[data-hook="option"][role="menuitem"]')
-            print("Options found:", len(options))
-
+            
             for option in options:
-                # Adjust option selector dynamically
-                name_element = await option.query_selector('span.sNipX2_')
+                name_element = await option.query_selector('span.sMgpOzd')
                 name = await name_element.text_content() if name_element else "Unnamed Option"
                 
-                print(f"Looking for title with name: {name}")
+                # Click on the option by its title
                 title = await page.query_selector(f'div[title="{name}"]')
-
                 if title:
-                    # Click to select the option directly
                     await page.evaluate('(element) => element.click()', title)
-                    await page.wait_for_timeout(2000)
-                    # Retrieve name and price for the selected option
-                    try:
-                        price_element = await page.query_selector('span[data-hook="formatted-primary-price"]')
-                        await page.wait_for_timeout(1000)  
-                        price = await price_element.text_content() if price_element else "No Price"
-                    except Exception as e:
-                        print(f"Error retrieving price: {e}")
-                        name, price = "Error Option", "Error Price"
+                    await page.wait_for_timeout(1500)
+                    await page.wait_for_load_state('load')
 
-                    print(f"Option: {name} - Price: {price}")
-                    names.append(name.strip())
+                    # Retrieve price for the selected option
+                    price_element = await page.query_selector('span[data-hook="formatted-primary-price"]')
+                    await page.wait_for_timeout(500)
+                    price = await price_element.text_content() if price_element else "No Price"
+
+                    # Append the name and price with product name to lists
+                    combined_name = f"{product_name} - Option: {name.strip()}"
+                    names.append(combined_name)
                     prices.append(price.strip())
-                else:
-                    print(f"Title element not found for {name}")
+                    print(f"Option: {combined_name} - Price: {price}")
                     
-                # Close and reopen dropdown if necessary
-                await page.evaluate('(element) => element.click()', dropdown_button)
-                await page.wait_for_timeout(1500)
-
+                    # Reopen dropdown for the next option
+                    await page.evaluate('(element) => element.click()', dropdown_button)
+                    await page.wait_for_timeout(1000)
 
         else:
-            print("Dropdown options container not found.")
+            print("Dropdown options container not found for single dropdown.")
             if retries > 0:
-                print("Retrying...")
+                print("Retrying single dropdown...")
                 await page.reload()
+                await page.wait_for_load_state('load')
                 await page.wait_for_timeout(3000)
                 dropdown_button = await page.query_selector('button[data-hook="dropdown-base"]')
                 if dropdown_button:
-                    await handle_dropdown(page, dropdown_button, names, prices, retries=3)
+                    await handle_single_dropdown(page, dropdown_button, names, product_name, prices, retries - 1)
             else:
-                print("Failed to find dropdown options container after retries.")
+                print("Failed to handle single dropdown after retries.")
 
     except Exception as e:
-        print(f"Error handling dropdown: {e}")
+        print(f"Error handling single dropdown: {e}")
+
+async def scrape_prices_for_dropdown_options(page, dropdown_buttons, first_dropdown_titles, second_dropdown_titles, product_name, names, prices, retries):
+    """Handles going through each drop down option and scrape the prices"""
+    for first_title in first_dropdown_titles:
+        try:
+
+            # Open and select first dropdown option
+            await page.evaluate('(element) => element.click()', dropdown_buttons[0])
+            await page.wait_for_timeout(1000)
+            first_option = await page.query_selector(f'span:text("{first_title}")')
+            if not first_option:
+                print(f"First option '{first_title}' not found, retrying...")
+                await scrape_prices_for_dropdown_options(
+                    page, dropdown_buttons, first_dropdown_titles,
+                    second_dropdown_titles, product_name, names, prices, retries-1
+                )
+                return
+
+            await page.evaluate('(element) => element.click()', first_option)
+            await page.wait_for_timeout(1000)
+
+            # Loop through second dropdown options
+            for second_title in second_dropdown_titles:
+                await page.evaluate('(element) => element.click()', dropdown_buttons[1])
+                await page.wait_for_timeout(1000)
+
+                second_option = await page.query_selector(f'span:text("{second_title}")')
+                if not second_option:
+                    print(f"Second option '{second_title}' not found, retrying second dropdown...")
+                    continue  # Skip this iteration but don't retry whole function
+
+                await page.evaluate('(element) => element.click()', second_option)
+                await page.wait_for_timeout(1000)
+
+                # Extract and store price
+                price_element = await page.wait_for_selector('span[data-hook="formatted-primary-price"]', timeout=5000)
+                price = await price_element.text_content() if price_element else "No Price"
+
+                combined_name = f"{product_name} - {first_title.strip()} - {second_title.strip()}"
+                names.append(combined_name)
+                prices.append(price.strip())
+                print(f"Combination: {combined_name} - Price: {price}")
+
+        except Exception as e:
+            print(f"Error handling dropdowns: {e}")
+            await scrape_prices_for_dropdown_options(
+                page, dropdown_buttons, first_dropdown_titles,
+                second_dropdown_titles, product_name, names, prices, retries-1
+            )
+            return
 
 
+async def handle_two_dropdowns(page, dropdown_buttons, names, product_name, prices, retries):
+    """Handles interaction with two dropdowns, retrieving names and prices for each combination using titles for selection."""
+
+    # Find the container ID for the first dropdown
+    first_dropdown_container_id = await find_container_id(page, dropdown_buttons[0])
+    if not first_dropdown_container_id:
+        print("First dropdown container not found.")
+        return
+
+    # Find the container ID for the second dropdown
+    second_dropdown_container_id = await find_container_id(page, dropdown_buttons[1])
+    if not second_dropdown_container_id:
+        print("Second dropdown container not found.")
+        return
+
+    # Gather options titles for first dropdown
+    first_dropdown_titles = await get_dropdown_titles(page, dropdown_buttons[0], first_dropdown_container_id)
+
+    # Gather options titles for the second dropdown
+    second_dropdown_titles = await get_dropdown_titles(page, dropdown_buttons[1], second_dropdown_container_id)
+
+    # Pass the dynamically obtained dropdown buttons to the scrape function
+    await scrape_prices_for_dropdown_options(page, dropdown_buttons, first_dropdown_titles, second_dropdown_titles, product_name, names, prices, retries)
+
+async def get_dropdown_titles(page, dropdown_button, container_id):
+    """Returns a list of titles for each option in a dropdown specified by the container ID."""
+    # Open the dropdown to retrieve titles
+    await page.evaluate('(element) => element.click()', dropdown_button)
+    await page.wait_for_timeout(1000)
+    container = await page.query_selector(container_id)
+
+    # Extract titles or return an empty list if container not found
+    options_elements = await container.query_selector_all('div[data-hook="option"][role="menuitem"]') if container else []
+    titles = []
+
+    for element in options_elements:
+        title_element = await element.query_selector('span.sMgpOzd')
+        title = await title_element.text_content() if title_element else "Unnamed Option"
+        titles.append(title)
+        print(f"Option title added: {title}")
+
+    # Close the dropdown after gathering titles
+    await page.evaluate('(element) => element.click()', dropdown_button)
+    return titles
 
 async def save_price_data(names, prices):
     """Saves or updates price data in a CSV file."""
