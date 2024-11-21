@@ -12,8 +12,8 @@ PRODUCT_PAGES = [
     # "https://www.apply3d.com/asiga",
     # "https://www.apply3d.com/asiga?page=2",
     # "https://www.apply3d.com/bluecast",
-    "https://www.apply3d.com/detax",
-    # "https://www.apply3d.com/keyprint",
+    # "https://www.apply3d.com/detax",
+    "https://www.apply3d.com/keyprint",
     # "https://www.apply3d.com/loctite",
     # "https://www.apply3d.com/nk-optik",
     # "https://www.apply3d.com/phrozen",
@@ -21,15 +21,40 @@ PRODUCT_PAGES = [
     # "https://www.apply3d.com/saremco"
 ]
 
-async def login(page, email, password):
-    """Log into the site."""
-    await page.goto("https://www.apply3d.com/")
-    await page.wait_for_load_state("networkidle")
-    await page.click('button:has(span:text("Login"))')
-    await page.fill('input[type="email"]', email)
-    await page.fill('input[type="password"]', password)
-    await page.click('button:has(span.l7_2fn:text("Log In"))')
-    print("Logged in successfully.")
+async def login(page, email, password, max_retries=5):
+    """Log into the site with retries if the login button is not found."""
+    for attempt in range(1, max_retries + 1):
+        try:
+            print(f"Attempt {attempt} to log in...")
+
+            # Navigate to the login page
+            await page.goto("https://www.apply3d.com/")
+            await close_banner_if_present(page)
+            await page.wait_for_load_state("domcontentloaded")
+
+            # Wait for the login button
+            await page.wait_for_selector('button:has(span:text("Login"))', timeout=2500)
+            await page.click('button:has(span:text("Login"))')
+
+            # Fill in the login form
+            await page.fill('input[type="email"]', email)
+            await page.fill('input[type="password"]', password)
+
+            # Click the log-in button
+            await page.click('button:has(span.l7_2fn:text("Log In"))')
+
+            print("Logged in successfully.")
+            return
+
+        except Exception as e:
+            print(f"Login attempt {attempt} failed: {e}")
+            if attempt < max_retries:
+                print("Retrying...")
+                await page.reload()
+                await page.wait_for_load_state("domcontentloaded")
+            else:
+                print("Max login attempts reached. Unable to log in.")
+                raise
 
 async def extract_product_info(product):
     """Extracts the name and price or status for an individual product."""
@@ -99,13 +124,29 @@ async def process_price_ranges(page, product_pages, names, prices):
 
         name_element = await page.query_selector('h1[data-hook="product-title"]')
         product_name = await name_element.text_content() if name_element else "No Name"
-        
         dropdown_buttons = await page.query_selector_all('button[data-hook="dropdown-base"]')
-        if dropdown_buttons:
+        radio_buttons = await page.query_selector_all('div[data-hook="color-picker-item"]')
+
+        if radio_buttons and not dropdown_buttons:
+            if len(radio_buttons) > 1:
+                await handle_radio_buttons(page, names, radio_buttons, product_name, prices, retries=10)
+            if len(radio_buttons) == 1: 
+                await handle_radio_buttons(page, names, radio_buttons, product_name, prices, retries=10)
+        if dropdown_buttons and not radio_buttons:
             if len(dropdown_buttons) == 1:
                 await handle_single_dropdown(page, dropdown_buttons[0], names, product_name, prices, retries=10)
             elif len(dropdown_buttons) >= 2:
                 await handle_two_dropdowns(page, dropdown_buttons, names, product_name, prices, retries=10)
+        if dropdown_buttons and radio_buttons:
+            if len(dropdown_buttons) == 1 and len(radio_buttons) == 2:
+                print("i ran")
+                await handle_two_radios_and_dropdown(page, dropdown_buttons, radio_buttons, names, product_name, prices, retries=10)
+
+
+        # if dropdown_buttons && radio_buttons:
+        #     if len(dropdown_buttons) == 1 && len(radio_buttons) == 1
+        #         await handle_one_dropdown_and_one_radio_button(page, names, radio_buttons, product_name, prices, retries=10)
+        # ## also if 1 and there is dropdown would need to create new function
                 
 async def close_banner_if_present(page):
     """Closes a consent banner if present on the page."""
@@ -116,6 +157,44 @@ async def close_banner_if_present(page):
         print("button clicked")
     except:
         print("Banner not found")
+
+async def handle_radio_buttons(page, names, radio_buttons, product_name, prices,  retries):
+    """Handles interaction with radio buttons on a product page."""
+    print("Handling input options")
+
+    # Retry limit check
+    if retries <= 0:
+        print("Max retries reached for handling radio buttons.")
+        return
+
+    try:
+        for radio_button in radio_buttons:
+            # Locate the radio input element within the radio button container
+            selector = await radio_button.query_selector('input[type="radio"]')
+
+            # Click the radio input
+            await page.evaluate('(element) => element.click()', selector)
+            await page.wait_for_timeout(1500)
+
+            # Extract and store price
+            price_element = await page.query_selector('span[data-hook="formatted-primary-price"]')
+            price = await price_element.text_content() if price_element else "No Price"
+
+            # Retrieve option name from aria-label
+            name = await selector.get_attribute('aria-label') if selector else "No Label"
+            combined_name = f"{product_name} - Option: {name.strip()}"
+            
+            # Append combined name and price to lists
+            names.append(combined_name)
+            prices.append(price.strip())
+            print(f"Option: {combined_name} - Price: {price}")
+
+    except Exception as e:
+        print(f"Error handling radio buttons: {e}")
+        await handle_radio_buttons(page, names, product_name, prices, retries - 1, radio_buttons)
+
+# async def handle_one_dropdown_and_one_radio_button(page, names, radio_buttons, product_name, prices, retries):
+#     """"te"""
 
 async def find_container_id(page, dropdown_button):
     """Find the appropriate container ID on the page by checking a range of IDs."""
@@ -232,7 +311,7 @@ async def scrape_prices_for_dropdown_options(page, dropdown_buttons, first_dropd
                 second_option = await page.query_selector(f'span:text("{second_title}")')
                 if not second_option:
                     print(f"Second option '{second_title}' not found, retrying second dropdown...")
-                    continue  # Skip this iteration but don't retry whole function
+                    continue  
 
                 await page.evaluate('(element) => element.click()', second_option)
                 await page.wait_for_timeout(1000)
@@ -253,7 +332,6 @@ async def scrape_prices_for_dropdown_options(page, dropdown_buttons, first_dropd
                 second_dropdown_titles, product_name, names, prices, retries-1
             )
             return
-
 
 async def handle_two_dropdowns(page, dropdown_buttons, names, product_name, prices, retries):
     """Handles interaction with two dropdowns, retrieving names and prices for each combination using titles for selection."""
@@ -279,6 +357,84 @@ async def handle_two_dropdowns(page, dropdown_buttons, names, product_name, pric
     # Pass the dynamically obtained dropdown buttons to the scrape function
     await scrape_prices_for_dropdown_options(page, dropdown_buttons, first_dropdown_titles, second_dropdown_titles, product_name, names, prices, retries)
 
+async def handle_two_radios_and_dropdown(page, dropdown_buttons, radio_buttons, names, product_name, prices, retries):
+    """Handles interaction with two radio buttons and one dropdown on a product page."""
+    print("Handling two radio buttons and one dropdown")
+
+    # Retry limit check
+    if retries <= 0:
+        print("Max retries reached for handling two radios and dropdown.")
+        return
+    
+    # Open and iterate over dropdown options
+    dropdown_button = dropdown_buttons[0]
+    container_id = await find_container_id(page, dropdown_button)
+    container_open = False
+
+    try:
+        # Iterate over each radio button option
+        for radio_button in radio_buttons:
+            # Click the radio button
+            selector = await radio_button.query_selector('input[type="radio"]')
+            await page.wait_for_load_state("domcontentloaded")
+
+            await page.evaluate('(element) => element.click()', selector)
+            await page.wait_for_timeout(1000)
+
+            # Retrieve option name from aria-label
+            radio_label = await selector.get_attribute('aria-label') 
+            print(f"Selected Radio Button: {radio_label}")
+
+            if (container_open == False):
+                # Open and iterate over dropdown options
+                await page.evaluate('(element) => element.click()', dropdown_button)
+                container_open = not container_open
+                await page.wait_for_timeout(1000)
+
+            if container_id:
+                container = await page.query_selector(container_id)
+                options = await container.query_selector_all('div[data-hook="option"][role="menuitem"]')
+
+                for option in options:
+                    # Extract dropdown option name
+                    option_name_element = await option.query_selector('span.sMgpOzd')
+                    option_name = await option_name_element.text_content() if option_name_element else "Unnamed Option"
+
+                    #Click on the option by its title
+                    title = await page.query_selector(f'div[title="{option_name}"]')
+
+                    # Click dropdown option
+                    if title:
+                        await page.evaluate('(element) => element.click()', title)
+                        container_open = not container_open
+                        await page.wait_for_timeout(1500)
+                        await page.wait_for_load_state('load')
+
+                        # Extract price for the selected radio and dropdown combination
+                        price_element = await page.query_selector('span[data-hook="formatted-primary-price"]')
+                        price = await price_element.text_content() if price_element else "No Price"
+
+                        # Combine product name, radio label, and dropdown option name
+                        combined_name = f"{product_name} - {radio_label} - {option_name.strip()}"
+                        names.append(combined_name)
+                        prices.append(price.strip())
+
+                        print(f"Option: {combined_name} - Price: {price}")
+
+                        # Reopen the dropdown for the next option
+                        await page.evaluate('(element) => element.click()', dropdown_button)
+                        container_open = not container_open
+                        await page.wait_for_timeout(1000)
+            else:
+                print("Dropdown options container not found, retrying...")
+                await handle_two_radios_and_dropdown(page, dropdown_buttons, radio_buttons, names, product_name, prices, retries - 1)
+
+    except Exception as e:
+        print(f"Error handling two radios and dropdown: {e}")
+        await handle_two_radios_and_dropdown(page, dropdown_buttons, radio_buttons, names, product_name, prices, retries - 1)
+
+
+
 async def get_dropdown_titles(page, dropdown_button, container_id):
     """Returns a list of titles for each option in a dropdown specified by the container ID."""
     # Open the dropdown to retrieve titles
@@ -294,7 +450,6 @@ async def get_dropdown_titles(page, dropdown_button, container_id):
         title_element = await element.query_selector('span.sMgpOzd')
         title = await title_element.text_content() if title_element else "Unnamed Option"
         titles.append(title)
-        print(f"Option title added: {title}")
 
     # Close the dropdown after gathering titles
     await page.evaluate('(element) => element.click()', dropdown_button)
