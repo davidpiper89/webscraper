@@ -9,16 +9,16 @@ PRICE_FILE = 'prices_comparison.csv'
 
 # List of product page URLs to scrape
 PRODUCT_PAGES = [
-    # "https://www.apply3d.com/asiga",
-    # "https://www.apply3d.com/asiga?page=2",
-    # "https://www.apply3d.com/bluecast",
-    # "https://www.apply3d.com/detax",
+    "https://www.apply3d.com/asiga",
+    "https://www.apply3d.com/asiga?page=2",
+    "https://www.apply3d.com/bluecast",
+    "https://www.apply3d.com/detax",
     "https://www.apply3d.com/keyprint",
-    # "https://www.apply3d.com/loctite",
-    # "https://www.apply3d.com/nk-optik",
-    # "https://www.apply3d.com/phrozen",
-    # "https://www.apply3d.com/phrozen?page=2",
-    # "https://www.apply3d.com/saremco"
+    "https://www.apply3d.com/loctite",
+    "https://www.apply3d.com/nk-optik",
+    "https://www.apply3d.com/phrozen",
+    "https://www.apply3d.com/phrozen?page=2",
+    "https://www.apply3d.com/saremco"
 ]
 
 async def login(page, email, password, max_retries=5):
@@ -57,25 +57,35 @@ async def login(page, email, password, max_retries=5):
                 raise
 
 async def extract_product_info(product):
-    """Extracts the name and price or status for an individual product."""
+    """Extracts the name, price or status, and ribbon information for an individual product."""
+    # Extract product name
     name_element = await product.query_selector('p[data-hook="product-item-name"]')
     product_name = await name_element.text_content() if name_element else "No Name"
 
+    # Check if the product is out of stock
     out_of_stock_element = await product.query_selector('span[data-hook="product-item-out-of-stock"]')
-    if out_of_stock_element:
-        return f"{product_name} - Out of stock", await out_of_stock_element.text_content(), None 
 
+    # Extract ribbon information
+    ribbon = await product.query_selector('div[data-hook="RibbonDataHook.RibbonOnImage"]')
+    ribbon_text = await ribbon.text_content() if ribbon else "No Ribbon"
+
+    if out_of_stock_element:
+        return f"{product_name} - Out of stock", await out_of_stock_element.text_content(), None, ribbon_text
+
+    # Extract price information
     price_element = await product.query_selector('span[data-hook="product-item-price-to-pay"]')
     if price_element:
-        return product_name, await price_element.text_content(), None  
+        return product_name, await price_element.text_content(), None, ribbon_text
 
+    # Extract "from price" and link if available
     from_price_element = await product.query_selector('span[data-hook="price-range-from"]')
     if from_price_element:
         product_link = await product.query_selector('a[data-hook="product-item-product-details-link"]')
         link = await product_link.get_attribute('href') if product_link else None
-        return product_name, None, link 
+        return product_name, None, link, ribbon_text
 
-    return product_name, None, None 
+    # Default return for cases with no price or "from price"
+    return product_name, None, None, ribbon_text
 
 async def scrape_page(page, url):
     """Navigate to the page and retrieve product elements."""
@@ -91,30 +101,34 @@ async def scrape_prices():
         await login(page, 'testy888777@hotmail.com', 'Breadboard99')
 
         # Data collection lists
-        all_product_names, all_prices, all_product_from_price_pages = [], [], []
+        all_product_names, all_prices, all_ribbons, all_product_from_price_pages = [], [], [], []
 
         # Scrape each product page
         for url in PRODUCT_PAGES:
             print(f"Scraping page: {url}")
             product_list = await scrape_page(page, url)
             for product in product_list:
-                name, price, link = await extract_product_info(product)
+                name, price, link, ribbon = await extract_product_info(product)
                 if price:
                     all_product_names.append(name.strip())
                     all_prices.append(price.strip())
+                    all_ribbons.append(ribbon.strip())
                 elif link:
                     all_product_from_price_pages.append(link.strip())
+
         
         print("Number of products with price ranges:", len(all_product_from_price_pages))   
 
         # Process individual product pages for "from" price ranges
-        await process_price_ranges(page, all_product_from_price_pages, all_product_names, all_prices)
+        await process_price_ranges(page, all_product_from_price_pages, all_product_names, all_prices, all_ribbons)
 
-        await save_price_data(all_product_names, all_prices)
+        # Save the data, including ribbons
+        await save_price_data(all_product_names, all_prices, all_ribbons)
+
 
         await browser.close()
 
-async def process_price_ranges(page, product_pages, names, prices):
+async def process_price_ranges(page, product_pages, names, prices, ribbons):
     """Processes individual product pages that have one or two dropdowns for price ranges."""
     for product_page in product_pages:
         print("Navigating to", product_page)
@@ -129,25 +143,20 @@ async def process_price_ranges(page, product_pages, names, prices):
 
         if radio_buttons and not dropdown_buttons:
             if len(radio_buttons) > 1:
-                await handle_radio_buttons(page, names, radio_buttons, product_name, prices, retries=10)
-            if len(radio_buttons) == 1: 
-                await handle_radio_buttons(page, names, radio_buttons, product_name, prices, retries=10)
+                await handle_radio_buttons(page, names, radio_buttons, product_name, prices, ribbons, retries=10)
+            if len(radio_buttons) == 1:
+                await handle_radio_button(page, names, radio_buttons, product_name, prices, ribbons, retries=10)
         if dropdown_buttons and not radio_buttons:
             if len(dropdown_buttons) == 1:
-                await handle_single_dropdown(page, dropdown_buttons[0], names, product_name, prices, retries=10)
+                await handle_single_dropdown(page, dropdown_buttons[0], names, product_name, prices, ribbons, retries=10)
             elif len(dropdown_buttons) >= 2:
-                await handle_two_dropdowns(page, dropdown_buttons, names, product_name, prices, retries=10)
+                await handle_two_dropdowns(page, dropdown_buttons, names, product_name, prices, ribbons, retries=10)
         if dropdown_buttons and radio_buttons:
             if len(dropdown_buttons) == 1 and len(radio_buttons) == 2:
-                print("i ran")
-                await handle_two_radios_and_dropdown(page, dropdown_buttons, radio_buttons, names, product_name, prices, retries=10)
-
-
-        # if dropdown_buttons && radio_buttons:
-        #     if len(dropdown_buttons) == 1 && len(radio_buttons) == 1
-        #         await handle_one_dropdown_and_one_radio_button(page, names, radio_buttons, product_name, prices, retries=10)
-        # ## also if 1 and there is dropdown would need to create new function
-                
+                await handle_two_radios_and_dropdown(page, dropdown_buttons, radio_buttons, names, product_name, prices, ribbons, retries=10)
+            if len(dropdown_buttons) == 1 and len(radio_buttons) == 1:
+                await handle_one_radios_and_dropdown(page, dropdown_buttons, radio_buttons, names, product_name, prices, ribbons, retries=10)
+            
 async def close_banner_if_present(page):
     """Closes a consent banner if present on the page."""
     try:
@@ -158,9 +167,9 @@ async def close_banner_if_present(page):
     except:
         print("Banner not found")
 
-async def handle_radio_buttons(page, names, radio_buttons, product_name, prices,  retries):
+async def handle_radio_buttons(page, names, radio_buttons, product_name, prices, ribbons, retries):
     """Handles interaction with radio buttons on a product page."""
-    print("Handling input options")
+    print("Handling radio buttons")
 
     # Retry limit check
     if retries <= 0:
@@ -187,14 +196,111 @@ async def handle_radio_buttons(page, names, radio_buttons, product_name, prices,
             # Append combined name and price to lists
             names.append(combined_name)
             prices.append(price.strip())
+            ribbons.append("No Ribbon")
             print(f"Option: {combined_name} - Price: {price}")
 
     except Exception as e:
         print(f"Error handling radio buttons: {e}")
         await handle_radio_buttons(page, names, product_name, prices, retries - 1, radio_buttons)
 
-# async def handle_one_dropdown_and_one_radio_button(page, names, radio_buttons, product_name, prices, retries):
-#     """"te"""
+async def handle_radio_button(page, names, radio_buttons, product_name, prices, ribbons, retries):
+    """Handles interaction with radio buttons on a product page."""
+    print("Handling radio button")
+
+    # Retry limit check
+    if retries <= 0:
+        print("Max retries reached for handling radio buttons.")
+        return
+
+    try:
+        # Extract and store price
+        price_element = await page.query_selector('span[data-hook="formatted-primary-price"]')
+        price = await price_element.text_content() if price_element else "No Price"
+
+        # Retrieve option name from aria-label
+        product_colour_element = await page.query_selector('div[data-hook="product-colors-title"]')
+        product_color = await product_colour_element.text_content() if product_colour_element else "Unnamed Option"
+        print(f"Selected Radio Button: {product_color}")
+        combined_name = f"{product_name} - {product_color.strip()}"
+
+        # Append combined name and price to lists
+        names.append(combined_name)
+        prices.append(price.strip())
+        ribbons.append("No Ribbon")
+        print(f"Option: {combined_name} - Price: {price}")
+
+    except Exception as e:
+        print(f"Error handling radio buttons: {e}")
+        await handle_radio_buttons(page, names, product_name, prices, retries - 1, radio_buttons)
+
+async def handle_one_radios_and_dropdown(page, dropdown_buttons, radio_buttons, names, product_name, prices, ribbons, retries):
+    """Handles interaction with one radio buttons and one dropdown on a product page."""
+    print("Handling one radio buttons and one dropdown")
+
+    # Retry limit check
+    if retries <= 0:
+        print("Max retries reached for handling two radios and dropdown.")
+        return
+    
+    # Open and iterate over dropdown options
+    dropdown_button = dropdown_buttons[0]
+    container_id = await find_container_id(page, dropdown_button)
+    container_open = False
+
+    try:
+            product_colour_element = await page.query_selector('div#product-colors-title-1')
+            product_color = await product_colour_element.text_content() if product_colour_element else "Unnamed Option"
+
+            print(f"Selected Radio Button: {product_color}")
+
+            if (container_open == False):
+                # Open and iterate over dropdown options
+                await page.evaluate('(element) => element.click()', dropdown_button)
+                container_open = not container_open
+                await page.wait_for_timeout(1000)
+
+            if container_id:
+                container = await page.query_selector(container_id)
+                options = await container.query_selector_all('div[data-hook="option"][role="menuitem"]')
+
+                for option in options:
+                    # Extract dropdown option name
+                    option_name_element = await option.query_selector('span.sMgpOzd')
+                    option_name = await option_name_element.text_content() if option_name_element else "Unnamed Option"
+
+                    #Click on the option by its title
+                    title = await page.query_selector(f'div[title="{option_name}"]')
+
+                    # Click dropdown option
+                    if title:
+                        await page.evaluate('(element) => element.click()', title)
+                        container_open = not container_open
+                        await page.wait_for_timeout(1500)
+                        await page.wait_for_load_state('load')
+
+                        # Extract price for the selected radio and dropdown combination
+                        price_element = await page.query_selector('span[data-hook="formatted-primary-price"]')
+                        price = await price_element.text_content() if price_element else "No Price"
+
+                        # Combine product name, radio label, and dropdown option name
+                        combined_name = f"{product_name} - {product_color} - {option_name.strip()}"
+                        names.append(combined_name)
+                        prices.append(price.strip())
+                        ribbons.append("No Ribbon")
+
+                        print(f"Option: {combined_name} - Price: {price}")
+
+                        # Reopen the dropdown for the next option
+                        await page.evaluate('(element) => element.click()', dropdown_button)
+                        container_open = not container_open
+                        await page.wait_for_timeout(1000)
+            else:
+                print("Dropdown options container not found, retrying...")
+                await handle_two_radios_and_dropdown(page, dropdown_buttons, radio_buttons, names, product_name, prices, retries - 1)
+
+    except Exception as e:
+        print(f"Error handling two radios and dropdown: {e}")
+        await handle_two_radios_and_dropdown(page, dropdown_buttons, radio_buttons, names, product_name, prices, retries - 1)
 
 async def find_container_id(page, dropdown_button):
     """Find the appropriate container ID on the page by checking a range of IDs."""
@@ -227,7 +333,7 @@ async def find_container_id(page, dropdown_button):
     print("No appropriate container ID found.")
     return None
 
-async def handle_single_dropdown(page, dropdown_button, names, product_name, prices, retries):
+async def handle_single_dropdown(page, dropdown_button, names, product_name, prices, ribbons, retries):
     """Handles interaction with a single dropdown by selecting options based on title."""
     print("Handling single dropdown")
 
@@ -261,6 +367,7 @@ async def handle_single_dropdown(page, dropdown_button, names, product_name, pri
                     combined_name = f"{product_name} - Option: {name.strip()}"
                     names.append(combined_name)
                     prices.append(price.strip())
+                    ribbons.append("No Ribbon")
                     print(f"Option: {combined_name} - Price: {price}")
                     
                     # Reopen dropdown for the next option
@@ -283,7 +390,7 @@ async def handle_single_dropdown(page, dropdown_button, names, product_name, pri
     except Exception as e:
         print(f"Error handling single dropdown: {e}")
 
-async def scrape_prices_for_dropdown_options(page, dropdown_buttons, first_dropdown_titles, second_dropdown_titles, product_name, names, prices, retries):
+async def scrape_prices_for_dropdown_options(page, dropdown_buttons, first_dropdown_titles, second_dropdown_titles, product_name, names, prices, ribbons, retries):
     """Handles going through each drop down option and scrape the prices"""
     for first_title in first_dropdown_titles:
         try:
@@ -323,6 +430,7 @@ async def scrape_prices_for_dropdown_options(page, dropdown_buttons, first_dropd
                 combined_name = f"{product_name} - {first_title.strip()} - {second_title.strip()}"
                 names.append(combined_name)
                 prices.append(price.strip())
+                ribbons.append("No Ribbon")
                 print(f"Combination: {combined_name} - Price: {price}")
 
         except Exception as e:
@@ -333,7 +441,7 @@ async def scrape_prices_for_dropdown_options(page, dropdown_buttons, first_dropd
             )
             return
 
-async def handle_two_dropdowns(page, dropdown_buttons, names, product_name, prices, retries):
+async def handle_two_dropdowns(page, dropdown_buttons, names, product_name, prices, ribbons, retries):
     """Handles interaction with two dropdowns, retrieving names and prices for each combination using titles for selection."""
 
     # Find the container ID for the first dropdown
@@ -355,9 +463,9 @@ async def handle_two_dropdowns(page, dropdown_buttons, names, product_name, pric
     second_dropdown_titles = await get_dropdown_titles(page, dropdown_buttons[1], second_dropdown_container_id)
 
     # Pass the dynamically obtained dropdown buttons to the scrape function
-    await scrape_prices_for_dropdown_options(page, dropdown_buttons, first_dropdown_titles, second_dropdown_titles, product_name, names, prices, retries)
+    await scrape_prices_for_dropdown_options(page, dropdown_buttons, first_dropdown_titles, second_dropdown_titles, product_name, names, prices, ribbons, retries)
 
-async def handle_two_radios_and_dropdown(page, dropdown_buttons, radio_buttons, names, product_name, prices, retries):
+async def handle_two_radios_and_dropdown(page, dropdown_buttons, radio_buttons, names, product_name, prices, ribbons, retries):
     """Handles interaction with two radio buttons and one dropdown on a product page."""
     print("Handling two radio buttons and one dropdown")
 
@@ -418,6 +526,7 @@ async def handle_two_radios_and_dropdown(page, dropdown_buttons, radio_buttons, 
                         combined_name = f"{product_name} - {radio_label} - {option_name.strip()}"
                         names.append(combined_name)
                         prices.append(price.strip())
+                        ribbons.append("No Ribbon")
 
                         print(f"Option: {combined_name} - Price: {price}")
 
@@ -432,8 +541,6 @@ async def handle_two_radios_and_dropdown(page, dropdown_buttons, radio_buttons, 
     except Exception as e:
         print(f"Error handling two radios and dropdown: {e}")
         await handle_two_radios_and_dropdown(page, dropdown_buttons, radio_buttons, names, product_name, prices, retries - 1)
-
-
 
 async def get_dropdown_titles(page, dropdown_button, container_id):
     """Returns a list of titles for each option in a dropdown specified by the container ID."""
@@ -455,16 +562,16 @@ async def get_dropdown_titles(page, dropdown_button, container_id):
     await page.evaluate('(element) => element.click()', dropdown_button)
     return titles
 
-async def save_price_data(names, prices):
-    """Saves or updates price data in a CSV file."""
+async def save_price_data(names, prices, ribbons):
+    """Saves or updates price data in a CSV file, including ribbon information."""
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     if not os.path.exists(PRICE_FILE):
-        create_new_price_file(names, prices, timestamp)
+        create_new_price_file(names, prices, ribbons, timestamp)
     else:
-        update_existing_price_file(names, prices, timestamp)
+        update_existing_price_file(names, prices, ribbons, timestamp)
 
-def create_new_price_file(names, prices, timestamp):
-    """Creates a new price file with the initial data."""
+def create_new_price_file(names, prices, ribbons, timestamp):
+    """Creates a new price file with the initial data, including ribbons."""
     df = pd.DataFrame({
         "Product Names": names,
         "New to site?": ["YES"] * len(names),
@@ -472,20 +579,22 @@ def create_new_price_file(names, prices, timestamp):
         "Previous Timestamp": ["" for _ in names],
         "Current Prices": prices,
         "Current Timestamp": [timestamp] * len(names),
-        "Price Difference": ["N/A"] * len(names)
+        "Price Difference": ["N/A"] * len(names),
+        "Ribbon": ribbons
     })
     df.to_csv(PRICE_FILE, index=False)
-    print(f"Prices and product names saved to '{PRICE_FILE}'")
+    print(f"Prices, product names, and ribbons saved to '{PRICE_FILE}'")
 
-def update_existing_price_file(names, prices, timestamp):
-    """Updates the existing price file by comparing and adding new data."""
+def update_existing_price_file(names, prices, ribbons, timestamp):
+    """Updates the existing price file by comparing and adding new data, including ribbons."""
     df = pd.read_csv(PRICE_FILE)
     df['Previous Prices'], df['Previous Timestamp'] = df['Current Prices'], df['Current Timestamp']
     prev_product_names = set(df["Product Names"])
 
-    for product_name, price in zip(names, prices):
+    for product_name, price, ribbon in zip(names, prices, ribbons):
         if product_name in prev_product_names:
             df.loc[df['Product Names'] == product_name, 'Current Prices'] = price
+            df.loc[df['Product Names'] == product_name, 'Ribbon'] = ribbon
             df.loc[df['Product Names'] == product_name, 'New to site?'] = "NO"
         else:
             df = pd.concat([df, pd.DataFrame({
@@ -495,13 +604,14 @@ def update_existing_price_file(names, prices, timestamp):
                 "Previous Timestamp": [""],
                 "Current Prices": [price],
                 "Current Timestamp": [timestamp],
-                "Price Difference": ["N/A"]
+                "Price Difference": ["N/A"],
+                "Ribbon": [ribbon]
             })], ignore_index=True)
 
     df['Price Difference'] = df.apply(calculate_price_difference, axis=1)
     df['Current Timestamp'] = timestamp
     df.to_csv(PRICE_FILE, index=False)
-    print(f"Updated prices and product names saved to '{PRICE_FILE}'")
+    print(f"Updated prices, product names, and ribbons saved to '{PRICE_FILE}'")
 
 def calculate_price_difference(row):
     """Calculates the difference between previous and current prices."""
