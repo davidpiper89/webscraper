@@ -201,7 +201,7 @@ async def handle_radio_buttons(page, names, radio_buttons, product_name, prices,
 
     except Exception as e:
         print(f"Error handling radio buttons: {e}")
-        await handle_radio_buttons(page, names, product_name, prices, retries - 1, radio_buttons)
+        await handle_radio_buttons(page, names, radio_buttons, product_name, prices, ribbons, retries - 1)
 
 async def handle_radio_button(page, names, radio_buttons, product_name, prices, ribbons, retries):
     """Handles interaction with radio buttons on a product page."""
@@ -231,7 +231,7 @@ async def handle_radio_button(page, names, radio_buttons, product_name, prices, 
 
     except Exception as e:
         print(f"Error handling radio buttons: {e}")
-        await handle_radio_buttons(page, names, product_name, prices, retries - 1, radio_buttons)
+        await handle_radio_buttons(page, names, radio_buttons, product_name, prices, ribbons, retries - 1)
 
 async def handle_one_radios_and_dropdown(page, dropdown_buttons, radio_buttons, names, product_name, prices, ribbons, retries):
     """Handles interaction with one radio buttons and one dropdown on a product page."""
@@ -296,11 +296,11 @@ async def handle_one_radios_and_dropdown(page, dropdown_buttons, radio_buttons, 
                         await page.wait_for_timeout(1000)
             else:
                 print("Dropdown options container not found, retrying...")
-                await handle_two_radios_and_dropdown(page, dropdown_buttons, radio_buttons, names, product_name, prices, retries - 1)
+                await handle_two_radios_and_dropdown(page, dropdown_buttons, radio_buttons, names, product_name, prices, ribbons, retries - 1)
 
     except Exception as e:
         print(f"Error handling two radios and dropdown: {e}")
-        await handle_two_radios_and_dropdown(page, dropdown_buttons, radio_buttons, names, product_name, prices, retries - 1)
+        await handle_two_radios_and_dropdown(page, dropdown_buttons, radio_buttons, names, product_name, prices, ribbons, retries - 1)
 
 async def find_container_id(page, dropdown_button):
     """Find the appropriate container ID on the page by checking a range of IDs."""
@@ -383,7 +383,7 @@ async def handle_single_dropdown(page, dropdown_button, names, product_name, pri
                 await page.wait_for_timeout(3000)
                 dropdown_button = await page.query_selector('button[data-hook="dropdown-base"]')
                 if dropdown_button:
-                    await handle_single_dropdown(page, dropdown_button, names, product_name, prices, retries - 1)
+                    await handle_single_dropdown(page, dropdown_button, names, product_name, prices, ribbons, retries - 1)
             else:
                 print("Failed to handle single dropdown after retries.")
 
@@ -436,8 +436,7 @@ async def scrape_prices_for_dropdown_options(page, dropdown_buttons, first_dropd
         except Exception as e:
             print(f"Error handling dropdowns: {e}")
             await scrape_prices_for_dropdown_options(
-                page, dropdown_buttons, first_dropdown_titles,
-                second_dropdown_titles, product_name, names, prices, retries-1
+                page, dropdown_buttons, first_dropdown_titles, second_dropdown_titles, product_name, names, prices, ribbons, retries-1
             )
             return
 
@@ -536,11 +535,11 @@ async def handle_two_radios_and_dropdown(page, dropdown_buttons, radio_buttons, 
                         await page.wait_for_timeout(1000)
             else:
                 print("Dropdown options container not found, retrying...")
-                await handle_two_radios_and_dropdown(page, dropdown_buttons, radio_buttons, names, product_name, prices, retries - 1)
+                await handle_two_radios_and_dropdown(page, dropdown_buttons, radio_buttons, names, product_name, prices, ribbons, retries - 1)
 
     except Exception as e:
         print(f"Error handling two radios and dropdown: {e}")
-        await handle_two_radios_and_dropdown(page, dropdown_buttons, radio_buttons, names, product_name, prices, retries - 1)
+        await handle_two_radios_and_dropdown(page, dropdown_buttons, radio_buttons, names, product_name, prices, ribbons, retries - 1)
 
 async def get_dropdown_titles(page, dropdown_button, container_id):
     """Returns a list of titles for each option in a dropdown specified by the container ID."""
