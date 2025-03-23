@@ -1,181 +1,779 @@
-Product Names,New to site?,Previous Prices,Previous Timestamp,Current Prices,Current Timestamp,Price Difference,Ribbon
-Asiga Ultra,NO,"£11,917.00",2024-12-03 17:38:00,"£11,917.00",2024-12-03 17:52:14,0.0,No Ribbon
-Asiga Max 2,NO,"£7,917.00",2024-12-03 17:38:00,"£7,917.00",2024-12-03 17:52:14,0.0,No Ribbon
-Asiga PRO 4K,NO,"£21,000.00",2024-12-03 17:38:00,"£21,000.00",2024-12-03 17:52:14,0.0,No Ribbon
-Asiga MAX X,NO,"£7,917.00",2024-12-03 17:38:00,"£7,917.00",2024-12-03 17:52:14,0.0,No Ribbon
-Asiga MAX,NO,"£7,134.00",2024-12-03 17:38:00,"£7,134.00",2024-12-03 17:52:14,0.0,No Ribbon
-Asiga LIFT™ Tray - 20L,NO,£471.00,2024-12-03 17:38:00,£471.00,2024-12-03 17:52:14,0.0,No Ribbon
-1L Max Low Force Build Tray,NO,£83.00,2024-12-03 17:38:00,£83.00,2024-12-03 17:52:14,0.0,No Ribbon
-Asiga Pro 4K Build Platform,NO,£713.00,2024-12-03 17:38:00,£713.00,2024-12-03 17:52:14,0.0,No Ribbon
-"DentaTRY, 1kg Bottle",NO,£143.00,2024-12-03 17:38:00,£143.00,2024-12-03 17:52:14,0.0,No Ribbon
-"DentaGUIDE, 1kg Bottle",NO,£143.00,2024-12-03 17:38:00,£143.00,2024-12-03 17:52:14,0.0,No Ribbon
-"DentaIBT, 1kg Bottle",NO,£143.00,2024-12-03 17:38:00,£143.00,2024-12-03 17:52:14,0.0,No Ribbon
-"DentaTRAY, 1kg Bottle",NO,£143.00,2024-12-03 17:38:00,£143.00,2024-12-03 17:52:14,0.0,No Ribbon
-"DentaBASE N1, 1kg Bottle",NO,£205.00,2024-12-03 17:38:00,£205.00,2024-12-03 17:52:14,0.0,No Ribbon
-"DentaMODEL, 1kg Bottle",NO,£143.00,2024-12-03 17:38:00,£143.00,2024-12-03 17:52:14,0.0,No Ribbon
-"DentaGUM, 1kg Bottle",NO,£143.00,2024-12-03 17:38:00,£143.00,2024-12-03 17:52:14,0.0,No Ribbon
-"FusionGRAY V2, 1Kg Bottle",NO,£217.00,2024-12-03 17:38:00,£217.00,2024-12-03 17:52:14,0.0,No Ribbon
-"DentaSTUDY, 1kg Bottle",NO,£143.00,2024-12-03 17:38:00,£143.00,2024-12-03 17:52:14,0.0,No Ribbon
-"DentaFORM, 1kg Bottle",NO,£104.00,2024-12-03 17:38:00,£104.00,2024-12-03 17:52:14,0.0,No Ribbon
-"DentaCAST, 1kg Bottle",NO,£143.00,2024-12-03 17:38:00,£143.00,2024-12-03 17:52:14,0.0,No Ribbon
-"DentaTOOTH, 1kg Bottle",NO,£287.00,2024-12-03 17:38:00,£287.00,2024-12-03 17:52:14,0.0,No Ribbon
-"PlasGray V2, 1kg Bottle",NO,£143.00,2024-12-03 17:38:00,£143.00,2024-12-03 17:52:14,0.0,No Ribbon
-"PlasClear V2, 1kg Bottle",NO,£143.00,2024-12-03 17:38:00,£143.00,2024-12-03 17:52:14,0.0,No Ribbon
-"PlasWhite V2, 1kg Bottle",NO,£143.00,2024-12-03 17:38:00,£143.00,2024-12-03 17:52:14,0.0,No Ribbon
-"SuperCAST X, 1kg Bottle",NO,£291.00,2024-12-03 17:38:00,£291.00,2024-12-03 17:52:14,0.0,No Ribbon
-BlueCast X-FILIGREE V2,NO,£113.00,2024-12-03 17:38:00,£113.00,2024-12-03 17:52:14,0.0,No Ribbon
-BlueCast X-One V2,NO,£113.00,2024-12-03 17:38:00,£113.00,2024-12-03 17:52:14,0.0,No Ribbon
-Detax FREEPRINT® MODEL 2.0,NO,£167.00,2024-12-03 17:38:00,£167.00,2024-12-03 17:52:14,0.0,No Ribbon
-Detax FREEPRINT® ORTHO,NO,£263.00,2024-12-03 17:38:00,£263.00,2024-12-03 17:52:14,0.0,No Ribbon
-"KeyGuard, 1kg",NO,£321.00,2024-12-03 17:38:00,£321.00,2024-12-03 17:52:14,0.0,No Ribbon
-"KeyOrthoModel, 1kg",NO,£151.00,2024-12-03 17:38:00,£151.00,2024-12-03 17:52:14,0.0,No Ribbon
-"KeyCast, 1kg",NO,£207.00,2024-12-03 17:38:00,£207.00,2024-12-03 17:52:14,0.0,No Ribbon
-KeyOrtho IBT,NO,£311.00,2024-12-03 17:38:00,£311.00,2024-12-03 17:52:14,0.0,No Ribbon
-KeyDenture Try-In,NO,£259.00,2024-12-03 17:38:00,£259.00,2024-12-03 17:52:14,0.0,No Ribbon
-"KeyTray, 1kg",NO,£245.00,2024-12-03 17:38:00,£245.00,2024-12-03 17:52:14,0.0,No Ribbon
-"KeySplint Hard, 1kg",NO,£442.00,2024-12-03 17:38:00,£442.00,2024-12-03 17:52:14,0.0,No Ribbon
-"KeyMask, 0.5kg",NO,£182.00,2024-12-03 17:38:00,£182.00,2024-12-03 17:52:14,0.0,No Ribbon
-"KeyGuide, 1kg",NO,£250.00,2024-12-03 17:38:00,£250.00,2024-12-03 17:52:14,0.0,No Ribbon
-"KeySplint Soft, 1kg",NO,£442.00,2024-12-03 17:38:00,£442.00,2024-12-03 17:52:14,0.0,No Ribbon
-LOCTITE® 3D PRO9274 - Gray,NO,£88.00,2024-12-03 17:38:00,£88.00,2024-12-03 17:52:14,0.0,No Ribbon
-Loctite 3D IND5714,NO,£213.00,2024-12-03 17:38:00,£213.00,2024-12-03 17:52:14,0.0,No Ribbon
-Loctite 3D IND406,NO,£221.00,2024-12-03 17:38:00,£221.00,2024-12-03 17:52:14,0.0,No Ribbon
-Loctite 3D 3860,NO,£213.00,2024-12-03 17:38:00,£213.00,2024-12-03 17:52:14,0.0,No Ribbon
-Loctite 3D IND3380,NO,£329.00,2024-12-03 17:38:00,£329.00,2024-12-03 17:52:14,0.0,No Ribbon
-Loctite 3D 3955,NO,£329.00,2024-12-03 17:38:00,£329.00,2024-12-03 17:52:14,0.0,No Ribbon
-Loctite 3D 3172,NO,£175.00,2024-12-03 17:38:00,£175.00,2024-12-03 17:52:14,0.0,No Ribbon
-LOCTITE 3D 3843,NO,£175.00,2024-12-03 17:38:00,£175.00,2024-12-03 17:52:14,0.0,No Ribbon
-LOCTITE 3D IND403,NO,£221.00,2024-12-03 17:38:00,£221.00,2024-12-03 17:52:14,0.0,No Ribbon
-LOCTITE 3D IND249,NO,£246.00,2024-12-03 17:38:00,£246.00,2024-12-03 17:52:14,0.0,No Ribbon
-LOCTITE 3D IND405,NO,£175.00,2024-12-03 17:38:00,£175.00,2024-12-03 17:52:14,0.0,No Ribbon
-LOCTITE 3D IND147,NO,£246.00,2024-12-03 17:38:00,£246.00,2024-12-03 17:52:14,0.0,No Ribbon
-LOCTITE 3D IND475,NO,£213.00,2024-12-03 17:38:00,£213.00,2024-12-03 17:52:14,0.0,No Ribbon
-LOCTITE 3D IND402,NO,£238.00,2024-12-03 17:38:00,£238.00,2024-12-03 17:52:14,0.0,No Ribbon
-LOCTITE 3D 8195,NO,£192.00,2024-12-03 17:38:00,£192.00,2024-12-03 17:52:14,0.0,No Ribbon
-"Loctite 3D Printing Cleaner T, 18kg",NO,£458.00,2024-12-03 17:38:00,£458.00,2024-12-03 17:52:14,0.0,No Ribbon
-"Loctite 3D Printing Cleaner C, 18kg",NO,£433.00,2024-12-03 17:38:00,£433.00,2024-12-03 17:52:14,0.0,No Ribbon
-Loctite EQ CL36 LED Curing Chamber,NO,"£5,667.00",2024-12-03 17:38:00,"£5,667.00",2024-12-03 17:52:14,0.0,No Ribbon
-Otoflash G171-6  With protective Gas Port,NO,"£2,667.00",2024-12-03 17:38:00,"£2,667.00",2024-12-03 17:52:14,0.0,No Ribbon
-Otoflash G171-2,NO,"£2,267.00",2024-12-03 17:38:00,"£2,267.00",2024-12-03 17:52:14,0.0,No Ribbon
-Sonic Mighty Revo 14K,NO,£792.00,2024-12-03 17:38:00,£792.00,2024-12-03 17:52:14,0.0,No Ribbon
-Sonic Mega 8K V2,NO,"£2,417.00",2024-12-03 17:38:00,"£2,417.00",2024-12-03 17:52:14,0.0,No Ribbon
-Sonic Mega 8K V2 Bundle,NO,"£3,000.00",2024-12-03 17:38:00,"£3,000.00",2024-12-03 17:52:14,0.0,No Ribbon
-Sonic Mega 8K S,NO,"£1,292.00",2024-12-03 17:38:00,"£1,292.00",2024-12-03 17:52:14,0.0,No Ribbon
-Sonic Mega 8K S Bundle,NO,"£1,916.00",2024-12-03 17:38:00,"£1,916.00",2024-12-03 17:52:14,0.0,No Ribbon
-Sonic Mini 8K S,NO,£313.00,2024-12-03 17:38:00,£313.00,2024-12-03 17:52:14,0.0,No Ribbon
-Sonic Mighty 8K,NO,£500.00,2024-12-03 17:38:00,£500.00,2024-12-03 17:52:14,0.0,No Ribbon
-Lumii DLP 3D Printer,NO,"£2,583.00",2024-12-03 17:38:00,"£2,583.00",2024-12-03 17:52:14,0.0,No Ribbon
-Sonic XL 4K Plus,NO,"£2,917.00",2024-12-03 17:38:00,"£2,917.00",2024-12-03 17:52:14,0.0,Delivery by early of Dec
-Sonic XL 4K Plus Bundle,NO,"£4,100.00",2024-12-03 17:38:00,"£4,100.00",2024-12-03 17:52:14,0.0,Delivery by early of Dec
-Elastomer EL400 Gray,NO,£133.00,2024-12-03 17:38:00,£133.00,2024-12-03 17:52:14,0.0,No Ribbon
-Phrozen RPG 3D Printing Resin,NO,£46.00,2024-12-03 17:38:00,£46.00,2024-12-03 17:52:14,0.0,No Ribbon
-Aqua Hyperfine 3D Printing Resin,NO,£44.00,2024-12-03 17:38:00,£44.00,2024-12-03 17:52:14,0.0,No Ribbon
-ABS-Like Resin,NO,£38.00,2024-12-03 17:38:00,£38.00,2024-12-03 17:52:14,0.0,No Ribbon
-Aqua Clear Plus,NO,£41.00,2024-12-03 17:38:00,£41.00,2024-12-03 17:52:14,0.0,No Ribbon
-Phrozen Flame Retardant Resin FR940,NO,£100.00,2024-12-03 17:38:00,£100.00,2024-12-03 17:52:14,0.0,No Ribbon
-Ceramic White,NO,£94.00,2024-12-03 17:38:00,£94.00,2024-12-03 17:52:14,0.0,No Ribbon
-Water-Washable Dental Model,NO,£67.00,2024-12-03 17:38:00,£67.00,2024-12-03 17:52:14,0.0,No Ribbon
-Gingiva Mask 500g,NO,£74.80,2024-12-03 17:38:00,£74.80,2024-12-03 17:52:14,0.0,No Ribbon
-Dental Study Model Resin,NO,£63.00,2024-12-03 17:38:00,£63.00,2024-12-03 17:52:14,0.0,No Ribbon
-Dental Ortho Model,NO,£108.00,2024-12-03 17:38:00,£108.00,2024-12-03 17:52:14,0.0,No Ribbon
-Onyx Impact Plus,NO,£104.00,2024-12-03 17:38:00,£104.00,2024-12-03 17:52:14,0.0,No Ribbon
-Onyx Rigid Pro410,NO,£83.00,2024-12-03 17:38:00,£83.00,2024-12-03 17:52:14,0.0,No Ribbon
-Speed resin,NO,£35.00,2024-12-03 17:38:00,£35.00,2024-12-03 17:52:14,0.0,No Ribbon
-TR300 Ultra High Temp,NO,£57.00,2024-12-03 17:38:00,£57.00,2024-12-03 17:52:14,0.0,Delivery by 5th December
-Phrozen Post-Processing Kit - Out of stock,NO,Out of stock,2024-12-03 17:38:00,Out of stock,2024-12-03 17:52:14,N/A,Delivery by early of Dec
-Wash Mega S,NO,£291.00,2024-12-03 17:38:00,£291.00,2024-12-03 17:52:14,0.0,No Ribbon
-Cure Mega S,NO,£400.00,2024-12-03 17:38:00,£400.00,2024-12-03 17:52:14,0.0,No Ribbon
-Phrozen Cure V2,NO,£333.00,2024-12-03 17:38:00,£333.00,2024-12-03 17:52:14,0.0,Delivery by early of Dec
-Phrozen Wash+,NO,£625.00,2024-12-03 17:38:00,£625.00,2024-12-03 17:52:14,0.0,Delivery by early of Dec
-Wash & Cure Kit,NO,£221.00,2024-12-03 17:38:00,£221.00,2024-12-03 17:52:14,0.0,No Ribbon
-Sonic Saber Ultrasonic Cutter,NO,£229.00,2024-12-03 17:38:00,£229.00,2024-12-03 17:52:14,0.0,No Ribbon
-Pump & Fill Resin Feeder,NO,£133.00,2024-12-03 17:38:00,£133.00,2024-12-03 17:52:14,0.0,No Ribbon
-Air Purifier,NO,£41.00,2024-12-03 17:38:00,£41.00,2024-12-03 17:52:14,0.0,No Ribbon
-Phrozen Cure Beam,NO,£79.00,2024-12-03 17:38:00,£79.00,2024-12-03 17:52:14,0.0,No Ribbon
-Phrozen Light Curing Putty,NO,£13.80,2024-12-03 17:38:00,£13.80,2024-12-03 17:52:14,0.0,No Ribbon
-Phrozen Activate Carbon Filter,NO,£29.00,2024-12-03 17:38:00,£29.00,2024-12-03 17:52:14,0.0,No Ribbon
-Saremco print Cleaning Concentrate,NO,£104.00,2024-12-03 17:38:00,£104.00,2024-12-03 17:52:14,0.0,New
-"Saremco print CROWNTEC, 0.5kg",NO,£554.00,2024-12-03 17:38:00,£554.00,2024-12-03 17:52:14,0.0,No Ribbon
-"Saremco print DENTURETEC, 0.5kg",NO,£238.00,2024-12-03 17:38:00,£238.00,2024-12-03 17:52:14,0.0,No Ribbon
-Max Universal Build Tray - Option: 1L,NO,£79.00,2024-12-03 17:38:00,£79.00,2024-12-03 17:52:14,0.0,No Ribbon
-Max Universal Build Tray - Option: 2L,NO,£113.00,2024-12-03 17:38:00,£113.00,2024-12-03 17:52:14,0.0,No Ribbon
-Max Universal Build Tray - Option: 5L,NO,£179.00,2024-12-03 17:38:00,£179.00,2024-12-03 17:52:14,0.0,No Ribbon
-Max Universal Build Tray - Option: 10L,NO,£240.00,2024-12-03 17:38:00,£240.00,2024-12-03 17:52:14,0.0,No Ribbon
-Asiga UltraGLOSS Build Tray - Option: Asiga Max UltraGLOSS Tray - 1L,NO,£96.00,2024-12-03 17:38:00,£96.00,2024-12-03 17:52:14,0.0,No Ribbon
-Asiga UltraGLOSS Build Tray - Option: Asiga Pro 4K UltraGLOSS Tray - 2L,NO,£100.00,2024-12-03 17:38:00,£100.00,2024-12-03 17:52:14,0.0,No Ribbon
-Asiga UltraGLOSS Build Tray - Option: Asiga Ultra UltraGLOSS Tray - 2L,NO,£96.00,2024-12-03 17:38:00,£96.00,2024-12-03 17:52:14,0.0,No Ribbon
-Pro 4K Low Force Build Tray - Option: 2L,NO,£83.00,2024-12-03 17:38:00,£83.00,2024-12-03 17:52:14,0.0,No Ribbon
-Pro 4K Low Force Build Tray - Option: 5L,NO,£108.00,2024-12-03 17:38:00,£108.00,2024-12-03 17:52:14,0.0,No Ribbon
-Pro 4K Low Force Build Tray - Option: 10L,NO,£179.00,2024-12-03 17:38:00,£179.00,2024-12-03 17:52:14,0.0,No Ribbon
-Detax FREEPRINT SPLINTMASTER - Option: TAFF,NO,£288.00,2024-12-03 17:38:00,£288.00,2024-12-03 17:52:14,0.0,No Ribbon
-Detax FREEPRINT SPLINTMASTER - Option: FLEX,NO,£325.00,2024-12-03 17:38:00,£325.00,2024-12-03 17:52:14,0.0,No Ribbon
-Detax FREEPRINT® DENTURE - Pink transparent - 1000g bottle,NO,£283.00,2024-12-03 17:38:00,£283.00,2024-12-03 17:52:14,0.0,No Ribbon
-Detax FREEPRINT® DENTURE - Pink transparent - 500g bottle,NO,£150.00,2024-12-03 17:38:00,£150.00,2024-12-03 17:52:14,0.0,No Ribbon
-Detax FREEPRINT® DENTURE - Pink - 1000g bottle,NO,£283.00,2024-12-03 17:38:00,£283.00,2024-12-03 17:52:14,0.0,No Ribbon
-Detax FREEPRINT® DENTURE - Pink - 500g bottle,NO,£150.00,2024-12-03 17:38:00,£150.00,2024-12-03 17:52:14,0.0,No Ribbon
-Detax FREEPRINT® GINGIVA - Option: 1000g bottle,NO,£196.00,2024-12-03 17:38:00,£196.00,2024-12-03 17:52:14,0.0,No Ribbon
-Detax FREEPRINT® GINGIVA - Option: 500g bottle,NO,£108.00,2024-12-03 17:38:00,£108.00,2024-12-03 17:52:14,0.0,No Ribbon
-Detax FREEPRINT® CROWN - A1 - 1000g bottle,NO,£721.00,2024-12-03 17:38:00,£721.00,2024-12-03 17:52:14,0.0,No Ribbon
-Detax FREEPRINT® CROWN - A1 - 500g bottle,NO,£392.00,2024-12-03 17:38:00,£392.00,2024-12-03 17:52:14,0.0,No Ribbon
-Detax FREEPRINT® CROWN - A2 - 1000g bottle,NO,£721.00,2024-12-03 17:38:00,£721.00,2024-12-03 17:52:14,0.0,No Ribbon
-Detax FREEPRINT® CROWN - A2 - 500g bottle,NO,£392.00,2024-12-03 17:38:00,£392.00,2024-12-03 17:52:14,0.0,No Ribbon
-Detax FREEPRINT® CROWN - A3 - 1000g bottle,NO,£721.00,2024-12-03 17:38:00,£721.00,2024-12-03 17:52:14,0.0,No Ribbon
-Detax FREEPRINT® CROWN - A3 - 500g bottle,NO,£392.00,2024-12-03 17:38:00,£392.00,2024-12-03 17:52:14,0.0,No Ribbon
-Detax FREEPRINT® CROWN - B1 - 1000g bottle,NO,£721.00,2024-12-03 17:38:00,£721.00,2024-12-03 17:52:14,0.0,No Ribbon
-Detax FREEPRINT® CROWN - B1 - 500g bottle,NO,£392.00,2024-12-03 17:38:00,£392.00,2024-12-03 17:52:14,0.0,No Ribbon
-Detax FREEPRINT® CROWN - B3 - 1000g bottle,NO,£721.00,2024-12-03 17:38:00,£721.00,2024-12-03 17:52:14,0.0,No Ribbon
-Detax FREEPRINT® CROWN - B3 - 500g bottle,NO,£392.00,2024-12-03 17:38:00,£392.00,2024-12-03 17:52:14,0.0,No Ribbon
-Detax FREEPRINT® CROWN - C2 - 1000g bottle,NO,£721.00,2024-12-03 17:38:00,£721.00,2024-12-03 17:52:14,0.0,No Ribbon
-Detax FREEPRINT® CROWN - C2 - 500g bottle,NO,£392.00,2024-12-03 17:38:00,£392.00,2024-12-03 17:52:14,0.0,No Ribbon
-Detax FREEPRINT® CROWN - D3 - 1000g bottle,NO,£721.00,2024-12-03 17:38:00,£721.00,2024-12-03 17:52:14,0.0,No Ribbon
-Detax FREEPRINT® CROWN - D3 - 500g bottle,NO,£392.00,2024-12-03 17:38:00,£392.00,2024-12-03 17:52:14,0.0,No Ribbon
-Detax FREEPRINT® CROWN - BL - 1000g bottle,NO,£721.00,2024-12-03 17:38:00,£721.00,2024-12-03 17:52:14,0.0,No Ribbon
-Detax FREEPRINT® CROWN - BL - 500g bottle,NO,£392.00,2024-12-03 17:38:00,£392.00,2024-12-03 17:52:14,0.0,No Ribbon
-KeyModel Ultra - Ivory - 1kg,NO,£83.00,2024-12-03 17:38:00,£83.00,2024-12-03 17:52:14,0.0,No Ribbon
-KeyModel Ultra - Ivory - 4kg,NO,£332.00,2024-12-03 17:38:00,£332.00,2024-12-03 17:52:14,0.0,No Ribbon
-KeyModel Ultra - Light Grey - 1kg,NO,£83.00,2024-12-03 17:38:00,£83.00,2024-12-03 17:52:14,0.0,No Ribbon
-KeyModel Ultra - Light Grey - 4kg,NO,£332.00,2024-12-03 17:38:00,£332.00,2024-12-03 17:52:14,0.0,No Ribbon
-Aqua 8K Resin - Color: Grey - 1kg,NO,£41.00,2024-12-03 17:38:00,£41.00,2024-12-03 17:52:14,0.0,No Ribbon
-Aqua 8K Resin - Color: Grey - 5kg,NO,£167.00,2024-12-03 17:38:00,£167.00,2024-12-03 17:52:14,0.0,No Ribbon
-Aqua 4K Resin - Color: Grey - 5kg,NO,£150.00,2024-12-03 17:38:00,£150.00,2024-12-03 17:52:14,0.0,No Ribbon
-Aqua 4K Resin - Color: Grey - 1kg,NO,£37.00,2024-12-03 17:38:00,£37.00,2024-12-03 17:52:14,0.0,No Ribbon
-Phrozen Castable Resin - Option: Green,NO,£121.00,2024-12-03 17:38:00,£121.00,2024-12-03 17:52:14,0.0,No Ribbon
-Phrozen Castable Resin - Option: Violet,NO,£108.00,2024-12-03 17:38:00,£108.00,2024-12-03 17:52:14,0.0,No Ribbon
-Water-Washable Resin - Colour: Black,NO,£33.00,2024-12-03 17:38:00,£33.00,2024-12-03 17:52:14,0.0,No Ribbon
-LCD Screen Protector - Option: Sonic Mighty 8K/12K/Revo,NO,£12.60,2024-12-03 17:38:00,£12.60,2024-12-03 17:52:14,0.0,No Ribbon
-LCD Screen Protector - Option: Sonic Mega 8K / 8K S / 8K V2,NO,£15.00,2024-12-03 17:38:00,£15.00,2024-12-03 17:52:14,0.0,No Ribbon
-Phrozen ACF Film (Pack of 3pcs) - Option: Mega 8K/290 x 450mm,NO,£100.00,2024-12-03 17:38:00,£100.00,2024-12-03 17:52:14,0.0,No Ribbon
-Phrozen ACF Film (Pack of 3pcs) - Option: Mighty 8K/220 x 310mm,NO,£71.00,2024-12-03 17:38:00,£71.00,2024-12-03 17:52:14,0.0,No Ribbon
-Phrozen ACF Film (Pack of 3pcs) - Option: Mini 8K/160 x 235mm,NO,£53.00,2024-12-03 17:38:00,£53.00,2024-12-03 17:52:14,0.0,No Ribbon
-Phrozen PFA (nFEP) Film - Option: Sonic Mega 8K / 8K S / 8K V2,NO,£33.40,2024-12-03 17:38:00,£33.40,2024-12-03 17:52:14,0.0,No Ribbon
-Phrozen PFA (nFEP) Film - Option: Sonic Mighty 8K/12K/Revo,NO,£20.00,2024-12-03 17:38:00,£20.00,2024-12-03 17:52:14,0.0,No Ribbon
-Phrozen PFA (nFEP) Film - Option: A4 size (210x190mm) for all other models,NO,£16.60,2024-12-03 17:38:00,£16.60,2024-12-03 17:52:14,0.0,No Ribbon
-Alumin Resin VAT - Option: Sonic Mighty 8K/12K/Revo,NO,£108.00,2024-12-03 17:38:00,£108.00,2024-12-03 17:52:14,0.0,No Ribbon
-Alumin Resin VAT - Option: Sonic Mini 8K / Mini 8K S,NO,£88.00,2024-12-03 17:38:00,£88.00,2024-12-03 17:52:14,0.0,No Ribbon
-Alumin Resin VAT - Option: Sonic Mega 8K,NO,£217.00,2024-12-03 17:38:00,£217.00,2024-12-03 17:52:14,0.0,No Ribbon
-Alumin Resin VAT - Option: Sonic XL 4K 2022/PLUS & Mighty 4K,NO,£91.00,2024-12-03 17:38:00,£91.00,2024-12-03 17:52:14,0.0,No Ribbon
-Alumin Resin VAT - Option: Sonic Mega 8K S,NO,£233.00,2024-12-03 17:38:00,£233.00,2024-12-03 17:52:14,0.0,No Ribbon
-Alumin Resin VAT - Option: Lumii DLP Printer,NO,£96.00,2024-12-03 17:38:00,£96.00,2024-12-03 17:52:14,0.0,No Ribbon
-Alumin Resin VAT - Option: Sonic 4K 2022 & Mini 4K,NO,£71.00,2024-12-03 17:38:00,£71.00,2024-12-03 17:52:14,0.0,No Ribbon
-Phrozen LCD Module - Option: Sonic Mighty Revo,NO,£146.00,2024-12-03 17:38:00,£146.00,2024-12-03 17:52:14,0.0,No Ribbon
-Phrozen LCD Module - Option: Sonic Mighty 8K,NO,£146.00,2024-12-03 17:38:00,£146.00,2024-12-03 17:52:14,0.0,No Ribbon
-Phrozen LCD Module - Option: Sonic Mighty 12K,NO,£146.00,2024-12-03 17:38:00,£146.00,2024-12-03 17:52:14,0.0,No Ribbon
-Phrozen LCD Module - Option: Sonic Mini 8K,NO,£129.00,2024-12-03 17:38:00,£129.00,2024-12-03 17:52:14,0.0,No Ribbon
-Phrozen LCD Module - Option: Sonic Mini 8K S,NO,£133.00,2024-12-03 17:38:00,£133.00,2024-12-03 17:52:14,0.0,No Ribbon
-Phrozen LCD Module - Option: Sonic Mega 8K & Mega 8K S,NO,£329.00,2024-12-03 17:38:00,£329.00,2024-12-03 17:52:14,0.0,No Ribbon
-Phrozen LCD Module - Option: Sonic XL 4K 2022/PLUS & Mighty 4K,NO,£125.00,2024-12-03 17:38:00,£125.00,2024-12-03 17:52:14,0.0,No Ribbon
-Phrozen LCD Module - Option: Sonic 4K 2022,NO,£113.00,2024-12-03 17:38:00,£113.00,2024-12-03 17:52:14,0.0,No Ribbon
-Phrozen Building Plate - Option: Mega 8K,NO,£142.00,2024-12-03 17:38:00,£142.00,2024-12-03 17:52:14,0.0,No Ribbon
-Phrozen Building Plate - Option: Mega 8K S,NO,£167.00,2024-12-03 17:38:00,£167.00,2024-12-03 17:52:14,0.0,No Ribbon
-Phrozen Building Plate - Option: Mini 8K / Mini 8K S,NO,£74.00,2024-12-03 17:38:00,£74.00,2024-12-03 17:52:14,0.0,No Ribbon
-Phrozen Building Plate - Option: Sonic Mighty 8K/12K,NO,£91.00,2024-12-03 17:38:00,£91.00,2024-12-03 17:52:14,0.0,No Ribbon
-Phrozen Building Plate - Option: Sonic Mighty Revo,NO,£91.00,2024-12-03 17:38:00,£91.00,2024-12-03 17:52:14,0.0,No Ribbon
-Phrozen Building Plate - Option: Sonic 4K 2022 & Mini 4K,NO,£67.00,2024-12-03 17:38:00,£67.00,2024-12-03 17:52:14,0.0,No Ribbon
-Phrozen Building Plate - Option: Sonic XL 4K 2022 / Plus,NO,£100.00,2024-12-03 17:38:00,£100.00,2024-12-03 17:52:14,0.0,No Ribbon
-Phrozen Building Plate - Option: Mighty 4K,NO,£91.00,2024-12-03 17:38:00,£91.00,2024-12-03 17:52:14,0.0,No Ribbon
-"KeyGuard, 1kg - Out of stock",NO,Out of stock,2024-12-03 17:38:00,Out of stock,2024-12-03 17:52:14,N/A,No Ribbon
-Gingiva Mask 500g - Out of stock,NO,Out of stock,2024-12-03 17:38:00,Out of stock,2024-12-03 17:52:14,N/A,No Ribbon
-Asiga Ultra Endurance Build Trays - Option: 2L,NO,£79.00,2024-12-03 17:38:00,£79.00,2024-12-03 17:52:14,0.0,No Ribbon
-Asiga Ultra Endurance Build Trays - Option: 5L,NO,£113.00,2024-12-03 17:38:00,£113.00,2024-12-03 17:52:14,0.0,No Ribbon
-Asiga Build Tray Storage Case - Option: Max / Pico Build Tray Storage Case,NO,£28.00,2024-12-03 17:38:00,£28.00,2024-12-03 17:52:14,0.0,No Ribbon
-Asiga Build Tray Storage Case - Option: PRO 4K Build Tray Storage Case,NO,£63.00,2024-12-03 17:38:00,£63.00,2024-12-03 17:52:14,0.0,No Ribbon
+Product Brand,Product Names,New to site?,Previous Prices,Previous Timestamp,Current Prices,Current Timestamp,Price Difference,Ribbon
+forward-am,"FREEPRINT Temp 385, 1kg",NO,£317.00,2025-03-23 09:18:01,£317.00,2025-03-23 09:58:25,0.0,No Ribbon
+forward-am,Detax FREEPRINT® MODEL 2.0,NO,£167.00,2025-03-23 09:18:01,£167.00,2025-03-23 09:58:25,0.0,No Ribbon
+forward-am,Detax FREEPRINT® ORTHO,NO,£263.00,2025-03-23 09:18:01,£263.00,2025-03-23 09:58:25,0.0,No Ribbon
+forward-am,Detax FREEPRINT® DENTURE - Pink transparent - 1000g bottle,NO,£283.00,2025-03-23 09:18:01,£283.00,2025-03-23 09:58:25,0.0,No Ribbon
+forward-am,Detax FREEPRINT® DENTURE - Pink transparent - 500g bottle,NO,£150.00,2025-03-23 09:18:01,£150.00,2025-03-23 09:58:25,0.0,No Ribbon
+forward-am,Detax FREEPRINT® DENTURE - Pink - 1000g bottle,NO,£283.00,2025-03-23 09:18:01,£283.00,2025-03-23 09:58:25,0.0,No Ribbon
+forward-am,Detax FREEPRINT® DENTURE - Pink - 500g bottle,NO,£150.00,2025-03-23 09:18:01,£150.00,2025-03-23 09:58:25,0.0,No Ribbon
+forward-am,Detax FREEPRINT SPLINTMASTER - Option: TAFF,NO,£288.00,2025-03-23 09:18:01,£288.00,2025-03-23 09:58:25,0.0,No Ribbon
+forward-am,Detax FREEPRINT SPLINTMASTER - Option: FLEX,NO,£325.00,2025-03-23 09:18:01,£325.00,2025-03-23 09:58:25,0.0,No Ribbon
+forward-am,Detax FREEPRINT® GINGIVA - Option: 1000g bottle,NO,£196.00,2025-03-23 09:18:01,£196.00,2025-03-23 09:58:25,0.0,No Ribbon
+forward-am,Detax FREEPRINT® GINGIVA - Option: 500g bottle,NO,£108.00,2025-03-23 09:18:01,£108.00,2025-03-23 09:58:25,0.0,No Ribbon
+forward-am,Detax FREEPRINT® CROWN - A1 - 1000g bottle,NO,£721.00,2025-03-23 09:18:01,£721.00,2025-03-23 09:58:25,0.0,No Ribbon
+forward-am,Detax FREEPRINT® CROWN - A1 - 500g bottle,NO,£392.00,2025-03-23 09:18:01,£392.00,2025-03-23 09:58:25,0.0,No Ribbon
+forward-am,Detax FREEPRINT® CROWN - A2 - 1000g bottle,NO,£721.00,2025-03-23 09:18:01,£721.00,2025-03-23 09:58:25,0.0,No Ribbon
+forward-am,Detax FREEPRINT® CROWN - A2 - 500g bottle,NO,£392.00,2025-03-23 09:18:01,£392.00,2025-03-23 09:58:25,0.0,No Ribbon
+forward-am,Detax FREEPRINT® CROWN - A3 - 1000g bottle,NO,£721.00,2025-03-23 09:18:01,£721.00,2025-03-23 09:58:25,0.0,No Ribbon
+forward-am,Detax FREEPRINT® CROWN - A3 - 500g bottle,NO,£392.00,2025-03-23 09:18:01,£392.00,2025-03-23 09:58:25,0.0,No Ribbon
+forward-am,Detax FREEPRINT® CROWN - B1 - 1000g bottle,NO,£721.00,2025-03-23 09:18:01,£721.00,2025-03-23 09:58:25,0.0,No Ribbon
+forward-am,Detax FREEPRINT® CROWN - B1 - 500g bottle,NO,£392.00,2025-03-23 09:18:01,£392.00,2025-03-23 09:58:25,0.0,No Ribbon
+forward-am,Detax FREEPRINT® CROWN - B3 - 1000g bottle,NO,£721.00,2025-03-23 09:18:01,£721.00,2025-03-23 09:58:25,0.0,No Ribbon
+forward-am,Detax FREEPRINT® CROWN - B3 - 500g bottle,NO,£392.00,2025-03-23 09:18:01,£392.00,2025-03-23 09:58:25,0.0,No Ribbon
+forward-am,Detax FREEPRINT® CROWN - C2 - 1000g bottle,NO,£721.00,2025-03-23 09:18:01,£721.00,2025-03-23 09:58:25,0.0,No Ribbon
+forward-am,Detax FREEPRINT® CROWN - C2 - 500g bottle,NO,£392.00,2025-03-23 09:18:01,£392.00,2025-03-23 09:58:25,0.0,No Ribbon
+forward-am,Detax FREEPRINT® CROWN - D3 - 1000g bottle,NO,£721.00,2025-03-23 09:18:01,£721.00,2025-03-23 09:58:25,0.0,No Ribbon
+forward-am,Detax FREEPRINT® CROWN - D3 - 500g bottle,NO,£392.00,2025-03-23 09:18:01,£392.00,2025-03-23 09:58:25,0.0,No Ribbon
+forward-am,Detax FREEPRINT® CROWN - BL - 1000g bottle,NO,£721.00,2025-03-23 09:18:01,£721.00,2025-03-23 09:58:25,0.0,No Ribbon
+forward-am,Detax FREEPRINT® CROWN - BL - 500g bottle,NO,£392.00,2025-03-23 09:18:01,£392.00,2025-03-23 09:58:25,0.0,No Ribbon
+asiga,Asiga Ultra 3D Printer,YES,,,"£11,917.00",2025-03-23 09:58:25,N/A,No Ribbon
+asiga,Asiga Max 2 3D Printer,YES,,,"£7,917.00",2025-03-23 09:58:25,N/A,No Ribbon
+asiga,Asiga PRO 4K 3D Printer,YES,,,"£21,000.00",2025-03-23 09:58:25,N/A,No Ribbon
+asiga,Asiga MAX X 3D Printer,YES,,,"£7,917.00",2025-03-23 09:58:25,N/A,No Ribbon
+asiga,Asiga Max LIFT Build Tray,YES,,,£471.00,2025-03-23 09:58:25,N/A,No Ribbon
+asiga,Asiga 1L Max Low Force Build Tray,YES,,,£83.00,2025-03-23 09:58:25,N/A,No Ribbon
+asiga,Asiga Pro 4K Build Platform,YES,,,£713.00,2025-03-23 09:58:25,N/A,No Ribbon
+asiga,"DentaTRY, 1kg Bottle",YES,,,£143.00,2025-03-23 09:58:25,N/A,No Ribbon
+asiga,"DentaGUIDE, 1kg Bottle",YES,,,£143.00,2025-03-23 09:58:25,N/A,No Ribbon
+asiga,"DentaIBT, 1kg Bottle",YES,,,£143.00,2025-03-23 09:58:25,N/A,No Ribbon
+asiga,"DentaTRAY, 1kg Bottle",YES,,,£143.00,2025-03-23 09:58:25,N/A,No Ribbon
+asiga,"DentaBASE N1, 1kg Bottle",YES,,,£205.00,2025-03-23 09:58:25,N/A,No Ribbon
+asiga,"DentaMODEL, 1kg Bottle",YES,,,£143.00,2025-03-23 09:58:25,N/A,No Ribbon
+asiga,"DentaGUM, 1kg Bottle",YES,,,£143.00,2025-03-23 09:58:25,N/A,No Ribbon
+asiga,"FusionGRAY V2, 1Kg Bottle",YES,,,£217.00,2025-03-23 09:58:25,N/A,No Ribbon
+asiga,"DentaSTUDY, 1kg Bottle",YES,,,£143.00,2025-03-23 09:58:25,N/A,No Ribbon
+asiga,"DentaFORM, 1kg Bottle",YES,,,£104.00,2025-03-23 09:58:25,N/A,No Ribbon
+asiga,"DentaCAST, 1kg Bottle",YES,,,£143.00,2025-03-23 09:58:25,N/A,No Ribbon
+asiga,"DentaTOOTH, 1kg Bottle",YES,,,£287.00,2025-03-23 09:58:25,N/A,No Ribbon
+asiga,"PlasGray V2, 1kg Bottle",YES,,,£143.00,2025-03-23 09:58:25,N/A,No Ribbon
+asiga,"PlasClear V2, 1kg Bottle",YES,,,£143.00,2025-03-23 09:58:25,N/A,No Ribbon
+asiga,"PlasWhite V2, 1kg Bottle",YES,,,£143.00,2025-03-23 09:58:25,N/A,No Ribbon
+asiga,"SuperCAST X, 1kg Bottle",YES,,,£291.00,2025-03-23 09:58:25,N/A,No Ribbon
+keyprint,"KeyGuard, 1kg - Out of stock",YES,,,Out of stock,2025-03-23 09:58:25,N/A,No Ribbon
+keyprint,"KeyOrthoModel, 1kg",YES,,,£151.00,2025-03-23 09:58:25,N/A,No Ribbon
+keyprint,"KeyCast, 1kg",YES,,,£207.00,2025-03-23 09:58:25,N/A,No Ribbon
+keyprint,KeyOrtho IBT,YES,,,£311.00,2025-03-23 09:58:25,N/A,No Ribbon
+keyprint,KeyDenture Try-In,YES,,,£259.00,2025-03-23 09:58:25,N/A,No Ribbon
+keyprint,"KeyTray, 1kg",YES,,,£245.00,2025-03-23 09:58:25,N/A,No Ribbon
+keyprint,KeySplint Hard,YES,,,£442.00,2025-03-23 09:58:25,N/A,No Ribbon
+keyprint,"KeyMask, 0.5kg",YES,,,£182.00,2025-03-23 09:58:25,N/A,No Ribbon
+keyprint,"KeyGuide, 1kg",YES,,,£250.00,2025-03-23 09:58:25,N/A,No Ribbon
+keyprint,"KeySplint Soft, 1kg",YES,,,£442.00,2025-03-23 09:58:25,N/A,No Ribbon
+loctite,LOCTITE 3D IND147,YES,,,£267.00,2025-03-23 09:58:25,N/A,No Ribbon
+loctite,LOCTITE 3D IND249,YES,,,£267.00,2025-03-23 09:58:25,N/A,No Ribbon
+loctite,LOCTITE 3D IND402,YES,,,£258.00,2025-03-23 09:58:25,N/A,No Ribbon
+loctite,LOCTITE 3D IND403,YES,,,£242.00,2025-03-23 09:58:25,N/A,No Ribbon
+loctite,LOCTITE 3D IND405,YES,,,£192.00,2025-03-23 09:58:25,N/A,No Ribbon
+loctite,LOCTITE 3D IND406,YES,,,£242.00,2025-03-23 09:58:25,N/A,No Ribbon
+loctite,LOCTITE 3D IND475,YES,,,£233.00,2025-03-23 09:58:25,N/A,No Ribbon
+loctite,LOCTITE 3D 3172,YES,,,£192.00,2025-03-23 09:58:25,N/A,No Ribbon
+loctite,LOCTITE 3D IND3380,YES,,,£363.00,2025-03-23 09:58:25,N/A,No Ribbon
+loctite,LOCTITE 3D MED3394,YES,,,£433.00,2025-03-23 09:58:25,N/A,No Ribbon
+loctite,LOCTITE 3D 3843,YES,,,£192.00,2025-03-23 09:58:25,N/A,No Ribbon
+loctite,LOCTITE 3D 3860,YES,,,£233.00,2025-03-23 09:58:25,N/A,No Ribbon
+loctite,LOCTITE 3D 3955,YES,,,£363.00,2025-03-23 09:58:25,N/A,No Ribbon
+loctite,LOCTITE 3D IND5714,YES,,,£233.00,2025-03-23 09:58:25,N/A,No Ribbon
+loctite,LOCTITE 3D IND6845,YES,,,£192.00,2025-03-23 09:58:25,N/A,No Ribbon
+loctite,LOCTITE 3D 8195,YES,,,£76.68,2025-03-23 09:58:25,N/A,40% off
+loctite,LOCTITE 3D PRO9274,YES,,,£100.00,2025-03-23 09:58:25,N/A,No Ribbon
+loctite,LOCTITE 3D MED9851,YES,,,£433.00,2025-03-23 09:58:25,N/A,No Ribbon
+loctite,LOCTITE EQ CL36 LED Curing Chamber,YES,,,"£6,250.00",2025-03-23 09:58:25,N/A,No Ribbon
+nk-optik,Otoflash G171-6  With protective Gas Port,YES,,,"£2,667.00",2025-03-23 09:58:25,N/A,No Ribbon
+nk-optik,Otoflash G171-2,YES,,,"£2,267.00",2025-03-23 09:58:25,N/A,No Ribbon
+phrozen,Phrozen Heat & Mix,YES,,,£160.00,2025-03-23 09:58:25,N/A,Delivery by end of March
+phrozen,Phrozen Sonic Mighty Revo 14K,YES,,,£633.60,2025-03-23 09:58:25,N/A,No Ribbon
+phrozen,Phrozen Sonic Mega 8K V2,YES,,,"£1,933.60",2025-03-23 09:58:25,N/A,No Ribbon
+phrozen,Phrozen Sonic Mega 8K V2 Bundle,YES,,,"£2,400.00",2025-03-23 09:58:25,N/A,No Ribbon
+phrozen,Phrozen Sonic Mega 8K S,YES,,,"£1,033.60",2025-03-23 09:58:25,N/A,No Ribbon
+phrozen,Phrozen Sonic Mega 8K S Bundle,YES,,,"£1,532.80",2025-03-23 09:58:25,N/A,No Ribbon
+phrozen,Phrozen Sonic Mini 8K S,YES,,,£250.40,2025-03-23 09:58:25,N/A,Delivery by 25th March
+phrozen,Phrozen Sonic Mighty 8K,YES,,,£400.00,2025-03-23 09:58:25,N/A,No Ribbon
+phrozen,Phrozen Lumii DLP,YES,,,"£2,066.40",2025-03-23 09:58:25,N/A,No Ribbon
+phrozen,Phrozen Sonic XL 4K Plus,YES,,,"£2,333.60",2025-03-23 09:58:25,N/A,No Ribbon
+phrozen,Phrozen Sonic XL 4K Plus Bundle,YES,,,"£3,280.00",2025-03-23 09:58:25,N/A,No Ribbon
+phrozen,Phrozen Elastomer EL400 Gray Resin,YES,,,£106.40,2025-03-23 09:58:25,N/A,No Ribbon
+phrozen,Phrozen RPG 3D Printing Resin,YES,,,£36.80,2025-03-23 09:58:25,N/A,No Ribbon
+phrozen,Phrozen Aqua Hyperfine 3D Printing Resin,YES,,,£35.20,2025-03-23 09:58:25,N/A,No Ribbon
+phrozen,Phrozen ABS-Like Resin,YES,,,£30.40,2025-03-23 09:58:25,N/A,No Ribbon
+phrozen,Phrozen Aqua Clear Plus Resin,YES,,,£32.80,2025-03-23 09:58:25,N/A,No Ribbon
+phrozen,Phrozen Flame Retardant Resin FR940,YES,,,£80.00,2025-03-23 09:58:25,N/A,No Ribbon
+phrozen,Phrozen Ceramic White Resin,YES,,,£75.20,2025-03-23 09:58:25,N/A,No Ribbon
+phrozen,Phrozen Water-Washable Dental Model Resin,YES,,,£53.60,2025-03-23 09:58:25,N/A,No Ribbon
+phrozen,Phrozen Gingiva Mask Resin,YES,,,£70.40,2025-03-23 09:58:25,N/A,No Ribbon
+phrozen,Phrozen Dental Study Model Resin,YES,,,£50.40,2025-03-23 09:58:25,N/A,No Ribbon
+phrozen,Phrozen Dental Ortho Model Resin,YES,,,£86.40,2025-03-23 09:58:25,N/A,No Ribbon
+phrozen,Phrozen Onyx Impact Plus Resin,YES,,,£83.20,2025-03-23 09:58:25,N/A,No Ribbon
+phrozen,Phrozen Onyx Rigid Pro410 Resin,YES,,,£66.40,2025-03-23 09:58:25,N/A,No Ribbon
+phrozen,Phrozen Speed Plus Resin,YES,,,£32.80,2025-03-23 09:58:25,N/A,No Ribbon
+phrozen,Phrozen Speed Resin,YES,,,£28.00,2025-03-23 09:58:25,N/A,No Ribbon
+phrozen,Phrozen TR300 Ultra High Temp Resin,YES,,,£45.60,2025-03-23 09:58:25,N/A,No Ribbon
+phrozen,Phrozen TR250 - Heat Resistant Resin - Out of stock,YES,,,Out of stock,2025-03-23 09:58:25,N/A,No Ribbon
+phrozen,Phrozen Post-Processing Kit,YES,,,£14.72,2025-03-23 09:58:25,N/A,No Ribbon
+phrozen,Phrozen Wash Mega S,YES,,,£232.80,2025-03-23 09:58:25,N/A,No Ribbon
+phrozen,Phrozen Cure Mega S,YES,,,£320.00,2025-03-23 09:58:25,N/A,No Ribbon
+phrozen,Phrozen Cure V2,YES,,,£266.40,2025-03-23 09:58:25,N/A,No Ribbon
+phrozen,Phrozen Wash+,YES,,,£500.00,2025-03-23 09:58:25,N/A,No Ribbon
+phrozen,Phrozen Wash & Cure Kit,YES,,,£176.80,2025-03-23 09:58:25,N/A,No Ribbon
+phrozen,Phrozen Sonic Saber Ultrasonic Cutter,YES,,,£183.20,2025-03-23 09:58:25,N/A,No Ribbon
+phrozen,Phrozen Pump & Fill Resin Feeder,YES,,,£106.40,2025-03-23 09:58:25,N/A,No Ribbon
+phrozen,Phrozen Air Purifier,YES,,,£32.80,2025-03-23 09:58:25,N/A,No Ribbon
+phrozen,Phrozen Cure Beam,YES,,,£63.20,2025-03-23 09:58:25,N/A,No Ribbon
+saremco,Saremco print Cleaning Concentrate,YES,,,£104.00,2025-03-23 09:58:25,N/A,New
+saremco,"Saremco print CROWNTEC, 0.5kg",YES,,,£554.00,2025-03-23 09:58:25,N/A,No Ribbon
+saremco,"Saremco print DENTURETEC, 0.5kg",YES,,,£238.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Asiga Ultra 3D Printer,YES,,,"£11,917.00",2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Asiga Max 2 3D Printer,YES,,,"£7,917.00",2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Asiga PRO 4K 3D Printer,YES,,,"£21,000.00",2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Asiga MAX X 3D Printer,YES,,,"£7,917.00",2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Asiga Max LIFT Build Tray,YES,,,£471.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Asiga 1L Max Low Force Build Tray,YES,,,£83.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Asiga Pro 4K Build Platform,YES,,,£713.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,"DentaTRY, 1kg Bottle",YES,,,£143.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,"DentaGUIDE, 1kg Bottle",YES,,,£143.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,"DentaIBT, 1kg Bottle",YES,,,£143.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,"DentaTRAY, 1kg Bottle",YES,,,£143.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,"DentaBASE N1, 1kg Bottle",YES,,,£205.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,"DentaMODEL, 1kg Bottle",YES,,,£143.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,"DentaGUM, 1kg Bottle",YES,,,£143.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,"FusionGRAY V2, 1Kg Bottle",YES,,,£217.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,"DentaSTUDY, 1kg Bottle",YES,,,£143.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,"DentaFORM, 1kg Bottle",YES,,,£104.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,"DentaCAST, 1kg Bottle",YES,,,£143.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,"DentaTOOTH, 1kg Bottle",YES,,,£287.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Phrozen Heat & Mix,YES,,,£160.00,2025-03-23 09:58:25,N/A,Delivery by end of March
+rodin,Phrozen Sonic Mighty Revo 14K,YES,,,£633.60,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Phrozen Sonic Mega 8K V2,YES,,,"£1,933.60",2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Phrozen Sonic Mega 8K V2 Bundle,YES,,,"£2,400.00",2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Phrozen Sonic Mega 8K S,YES,,,"£1,033.60",2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Phrozen Sonic Mega 8K S Bundle,YES,,,"£1,532.80",2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Phrozen Sonic Mini 8K S,YES,,,£250.40,2025-03-23 09:58:25,N/A,Delivery by 25th March
+rodin,Phrozen Sonic Mighty 8K,YES,,,£400.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Phrozen Lumii DLP,YES,,,"£2,066.40",2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Phrozen Sonic XL 4K Plus,YES,,,"£2,333.60",2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Phrozen Sonic XL 4K Plus Bundle,YES,,,"£3,280.00",2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Phrozen Elastomer EL400 Gray Resin,YES,,,£106.40,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Phrozen RPG 3D Printing Resin,YES,,,£36.80,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Phrozen Aqua Hyperfine 3D Printing Resin,YES,,,£35.20,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Phrozen ABS-Like Resin,YES,,,£30.40,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Phrozen Aqua Clear Plus Resin,YES,,,£32.80,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Phrozen Flame Retardant Resin FR940,YES,,,£80.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Phrozen Ceramic White Resin,YES,,,£75.20,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Phrozen Water-Washable Dental Model Resin,YES,,,£53.60,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Phrozen Gingiva Mask Resin,YES,,,£70.40,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Phrozen Dental Study Model Resin,YES,,,£50.40,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,HeyGears UltraCraft ChairSide Pro Combo,YES,,,"£7,500.00",2025-03-23 09:58:25,N/A,No Ribbon
+rodin,HeyGears UltraCraft ChairSide Combo,YES,,,"£7,500.00",2025-03-23 09:58:25,N/A,No Ribbon
+rodin,UltraCraft AirCure,YES,,,"£1,667.00",2025-03-23 09:58:25,N/A,No Ribbon
+rodin,UltraCraft AirWash,YES,,,"£1,667.00",2025-03-23 09:58:25,N/A,No Ribbon
+rodin,ChairSide Resin Pour Tank - Universal,YES,,,£41.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Standard Platform for ChairSide - 5pcs/set,YES,,,£13.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,"Mini platform for Chairside printer, set of 10pcs",YES,,,£21.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Mini platform adapter for UltraCraft ChairSide printer,YES,,,£33.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,F2-D Resin Tank,YES,,,£250.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,F2-D Building Platform,YES,,,£200.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,"UltraPrint-Dental Temp for Try-in, Capsule and Bottle - Out of stock",YES,,,Out of stock,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,"UltraPrint-Dental Study Model UV, Capsule",YES,,,£54.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,"UltraPrint-Dental Cast UV 3.0, 1kg bottle",YES,,,£208.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,"UltraPrint-Dental Gingiva UV 2.0, 500g",YES,,,£150.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,UltraPrint-Dental Tray UV 2.0,YES,,,£146.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,"KeyGuard, 1kg - Out of stock",YES,,,Out of stock,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,"KeyOrthoModel, 1kg",YES,,,£151.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,"KeyCast, 1kg",YES,,,£207.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,KeyOrtho IBT,YES,,,£311.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,KeyDenture Try-In,YES,,,£259.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,"KeyTray, 1kg",YES,,,£245.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,KeySplint Hard,YES,,,£442.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,"KeyMask, 0.5kg",YES,,,£182.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,"KeyGuide, 1kg",YES,,,£250.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,"KeySplint Soft, 1kg",YES,,,£442.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Saremco print Cleaning Concentrate,YES,,,£104.00,2025-03-23 09:58:25,N/A,New
+rodin,"Saremco print CROWNTEC, 0.5kg",YES,,,£554.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,"Saremco print DENTURETEC, 0.5kg",YES,,,£238.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Otoflash G171-6  With protective Gas Port,YES,,,"£2,667.00",2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Otoflash G171-2,YES,,,"£2,267.00",2025-03-23 09:58:25,N/A,No Ribbon
+rodin,LOCTITE 3D IND147,YES,,,£267.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,LOCTITE 3D IND249,YES,,,£267.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,LOCTITE 3D IND402,YES,,,£258.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,LOCTITE 3D IND403,YES,,,£242.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,LOCTITE 3D IND405,YES,,,£192.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,LOCTITE 3D IND406,YES,,,£242.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,LOCTITE 3D IND475,YES,,,£233.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,LOCTITE 3D 3172,YES,,,£192.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,LOCTITE 3D IND3380,YES,,,£363.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,LOCTITE 3D MED3394,YES,,,£433.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,LOCTITE 3D 3843,YES,,,£192.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,LOCTITE 3D 3860,YES,,,£233.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,LOCTITE 3D 3955,YES,,,£363.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,LOCTITE 3D IND5714,YES,,,£233.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,LOCTITE 3D IND6845,YES,,,£192.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,LOCTITE 3D 8195,YES,,,£76.68,2025-03-23 09:58:25,N/A,40% off
+rodin,LOCTITE 3D PRO9274,YES,,,£100.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,LOCTITE 3D MED9851,YES,,,£433.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,LOCTITE EQ CL36 LED Curing Chamber,YES,,,"£6,250.00",2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Phrozen Lumii DLP,YES,,,"£2,066.40",2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Phrozen Sonic XL 4K Plus,YES,,,"£2,333.60",2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Phrozen Sonic XL 4K Plus Bundle,YES,,,"£3,280.00",2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Phrozen Sonic Mighty Revo 14K,YES,,,£633.60,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Phrozen Sonic Mini 8K S,YES,,,£250.40,2025-03-23 09:58:25,N/A,Delivery by 25th March
+rodin,Phrozen Sonic Mighty 8K,YES,,,£400.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Phrozen Sonic Mega 8K S,YES,,,"£1,033.60",2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Phrozen Sonic Mega 8K S Bundle,YES,,,"£1,532.80",2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Phrozen Sonic Mega 8K V2,YES,,,"£1,933.60",2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Phrozen Water-Washable Dental Model Resin,YES,,,£53.60,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Phrozen Gingiva Mask Resin,YES,,,£70.40,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Phrozen Dental Ortho Model Resin,YES,,,£86.40,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Phrozen TR300 Ultra High Temp Resin,YES,,,£45.60,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Phrozen Dental Study Model Resin,YES,,,£50.40,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Phrozen Wash+,YES,,,£500.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Phrozen Heat & Mix,YES,,,£160.00,2025-03-23 09:58:25,N/A,Delivery by end of March
+rodin,Phrozen Cure V2,YES,,,£266.40,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Phrozen Wash & Cure Kit,YES,,,£176.80,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Phrozen Post-Processing Kit,YES,,,£14.72,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,"Rodin Titan, 600g",YES,,,£399.00,2025-03-23 09:58:25,N/A,Stock available from 30th Jan
+rodin,"Rodin Sculpture 2.0, 600g",YES,,,£399.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,BASF Ultracur3D® RG 9400 B FR,YES,,,£188.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,BASF Ultracur3D® FL 300,YES,,,£113.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,BASF Ultracur3D® ST 80,YES,,,£71.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,BASF Ultracur3D® ST 45,YES,,,£88.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,BASF Ultracur3D® RG 3280,YES,,,£267.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,BASF Ultracur3D® RG 35 B,YES,,,£96.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,BASF Ultracur3D® RG 1100 B,YES,,,£104.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,HeyGears UltraCraft Reflex,YES,,,£974.70,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,HeyGears UltraCraft Reflex RS,YES,,,£719.10,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,UltraCraft Cure,YES,,,£584.10,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,UltraCraft Wash,YES,,,£277.20,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,UltraPrint-Modeling PAS10 Standard Modeling Resin,YES,,,£24.30,2025-03-23 09:58:25,N/A,For Reflex and RS
+rodin,UltraPrint-Modeling PAWW10 Water Washable Resin,YES,,,£43.20,2025-03-23 09:58:25,N/A,For Reflex and RS
+rodin,UltraPrint-Modeling PAU10 ABS-like Resin,YES,,,£53.10,2025-03-23 09:58:25,N/A,For Reflex only
+rodin,UltraPrint-Modeling PARP10 Rapid Prototyping Resin,YES,,,£35.10,2025-03-23 09:58:25,N/A,For Reflex and RS
+rodin,UltraPrint-Modeling PAT10 Transparent Resin,YES,,,£71.10,2025-03-23 09:58:25,N/A,For Reflex only
+rodin,UltraPrint-Production PAP10 Precise Detail Resin,YES,,,£52.20,2025-03-23 09:58:25,N/A,For Reflex and RS
+rodin,UltraPrint-Production PAWR10 Wear-Resistant Resin,YES,,,£52.20,2025-03-23 09:58:25,N/A,For Reflex and RS
+rodin,UltraPrint-Molding PAH10 High-Temperature Resistance Resin,YES,,,£79.20,2025-03-23 09:58:25,N/A,For Reflex only
+rodin,UltraPrint-Casting PAC10 Wax Casting Resin,YES,,,£194.40,2025-03-23 09:58:25,N/A,For Reflex only
+rodin,LCD Screen Tape for Reflex Series,YES,,,£8.10,2025-03-23 09:58:25,N/A,15% off when added to cart
+rodin,Reflex Temperature and Liquid Level Sensor,YES,,,£44.10,2025-03-23 09:58:25,N/A,15% off when added to cart
+rodin,UltraCraft Wash - Washing Box,YES,,,£71.10,2025-03-23 09:58:25,N/A,15% off when added to cart
+heygears,Asiga Ultra 3D Printer,YES,,,"£11,917.00",2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Asiga Max 2 3D Printer,YES,,,"£7,917.00",2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Asiga PRO 4K 3D Printer,YES,,,"£21,000.00",2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Asiga MAX X 3D Printer,YES,,,"£7,917.00",2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Asiga Max LIFT Build Tray,YES,,,£471.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Asiga 1L Max Low Force Build Tray,YES,,,£83.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Asiga Pro 4K Build Platform,YES,,,£713.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,"DentaTRY, 1kg Bottle",YES,,,£143.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,"DentaGUIDE, 1kg Bottle",YES,,,£143.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,"DentaIBT, 1kg Bottle",YES,,,£143.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,"DentaTRAY, 1kg Bottle",YES,,,£143.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,"DentaBASE N1, 1kg Bottle",YES,,,£205.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,"DentaMODEL, 1kg Bottle",YES,,,£143.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,"DentaGUM, 1kg Bottle",YES,,,£143.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,"FusionGRAY V2, 1Kg Bottle",YES,,,£217.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,"DentaSTUDY, 1kg Bottle",YES,,,£143.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,"DentaFORM, 1kg Bottle",YES,,,£104.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,"DentaCAST, 1kg Bottle",YES,,,£143.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,"DentaTOOTH, 1kg Bottle",YES,,,£287.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Phrozen Heat & Mix,YES,,,£160.00,2025-03-23 09:58:25,N/A,Delivery by end of March
+heygears,Phrozen Sonic Mighty Revo 14K,YES,,,£633.60,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Phrozen Sonic Mega 8K V2,YES,,,"£1,933.60",2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Phrozen Sonic Mega 8K V2 Bundle,YES,,,"£2,400.00",2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Phrozen Sonic Mega 8K S,YES,,,"£1,033.60",2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Phrozen Sonic Mega 8K S Bundle,YES,,,"£1,532.80",2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Phrozen Sonic Mini 8K S,YES,,,£250.40,2025-03-23 09:58:25,N/A,Delivery by 25th March
+heygears,Phrozen Sonic Mighty 8K,YES,,,£400.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Phrozen Lumii DLP,YES,,,"£2,066.40",2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Phrozen Sonic XL 4K Plus,YES,,,"£2,333.60",2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Phrozen Sonic XL 4K Plus Bundle,YES,,,"£3,280.00",2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Phrozen Elastomer EL400 Gray Resin,YES,,,£106.40,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Phrozen RPG 3D Printing Resin,YES,,,£36.80,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Phrozen Aqua Hyperfine 3D Printing Resin,YES,,,£35.20,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Phrozen ABS-Like Resin,YES,,,£30.40,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Phrozen Aqua Clear Plus Resin,YES,,,£32.80,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Phrozen Flame Retardant Resin FR940,YES,,,£80.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Phrozen Ceramic White Resin,YES,,,£75.20,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Phrozen Water-Washable Dental Model Resin,YES,,,£53.60,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Phrozen Gingiva Mask Resin,YES,,,£70.40,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Phrozen Dental Study Model Resin,YES,,,£50.40,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,HeyGears UltraCraft ChairSide Pro Combo,YES,,,"£7,500.00",2025-03-23 09:58:25,N/A,No Ribbon
+heygears,HeyGears UltraCraft ChairSide Combo,YES,,,"£7,500.00",2025-03-23 09:58:25,N/A,No Ribbon
+heygears,UltraCraft AirCure,YES,,,"£1,667.00",2025-03-23 09:58:25,N/A,No Ribbon
+heygears,UltraCraft AirWash,YES,,,"£1,667.00",2025-03-23 09:58:25,N/A,No Ribbon
+heygears,ChairSide Resin Pour Tank - Universal,YES,,,£41.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Standard Platform for ChairSide - 5pcs/set,YES,,,£13.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,"Mini platform for Chairside printer, set of 10pcs",YES,,,£21.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Mini platform adapter for UltraCraft ChairSide printer,YES,,,£33.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,F2-D Resin Tank,YES,,,£250.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,F2-D Building Platform,YES,,,£200.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,"UltraPrint-Dental Temp for Try-in, Capsule and Bottle - Out of stock",YES,,,Out of stock,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,"UltraPrint-Dental Study Model UV, Capsule",YES,,,£54.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,"UltraPrint-Dental Cast UV 3.0, 1kg bottle",YES,,,£208.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,"UltraPrint-Dental Gingiva UV 2.0, 500g",YES,,,£150.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,UltraPrint-Dental Tray UV 2.0,YES,,,£146.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,"KeyGuard, 1kg - Out of stock",YES,,,Out of stock,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,"KeyOrthoModel, 1kg",YES,,,£151.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,"KeyCast, 1kg",YES,,,£207.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,KeyOrtho IBT,YES,,,£311.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,KeyDenture Try-In,YES,,,£259.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,"KeyTray, 1kg",YES,,,£245.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,KeySplint Hard,YES,,,£442.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,"KeyMask, 0.5kg",YES,,,£182.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,"KeyGuide, 1kg",YES,,,£250.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,"KeySplint Soft, 1kg",YES,,,£442.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Saremco print Cleaning Concentrate,YES,,,£104.00,2025-03-23 09:58:25,N/A,New
+heygears,"Saremco print CROWNTEC, 0.5kg",YES,,,£554.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,"Saremco print DENTURETEC, 0.5kg",YES,,,£238.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Otoflash G171-6  With protective Gas Port,YES,,,"£2,667.00",2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Otoflash G171-2,YES,,,"£2,267.00",2025-03-23 09:58:25,N/A,No Ribbon
+heygears,LOCTITE 3D IND147,YES,,,£267.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,LOCTITE 3D IND249,YES,,,£267.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,LOCTITE 3D IND402,YES,,,£258.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,LOCTITE 3D IND403,YES,,,£242.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,LOCTITE 3D IND405,YES,,,£192.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,LOCTITE 3D IND406,YES,,,£242.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,LOCTITE 3D IND475,YES,,,£233.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,LOCTITE 3D 3172,YES,,,£192.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,LOCTITE 3D IND3380,YES,,,£363.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,LOCTITE 3D MED3394,YES,,,£433.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,LOCTITE 3D 3843,YES,,,£192.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,LOCTITE 3D 3860,YES,,,£233.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,LOCTITE 3D 3955,YES,,,£363.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,LOCTITE 3D IND5714,YES,,,£233.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,LOCTITE 3D IND6845,YES,,,£192.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,LOCTITE 3D 8195,YES,,,£76.68,2025-03-23 09:58:25,N/A,40% off
+heygears,LOCTITE 3D PRO9274,YES,,,£100.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,LOCTITE 3D MED9851,YES,,,£433.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,LOCTITE EQ CL36 LED Curing Chamber,YES,,,"£6,250.00",2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Phrozen Lumii DLP,YES,,,"£2,066.40",2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Phrozen Sonic XL 4K Plus,YES,,,"£2,333.60",2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Phrozen Sonic XL 4K Plus Bundle,YES,,,"£3,280.00",2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Phrozen Sonic Mighty Revo 14K,YES,,,£633.60,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Phrozen Sonic Mini 8K S,YES,,,£250.40,2025-03-23 09:58:25,N/A,Delivery by 25th March
+heygears,Phrozen Sonic Mighty 8K,YES,,,£400.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Phrozen Sonic Mega 8K S,YES,,,"£1,033.60",2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Phrozen Sonic Mega 8K S Bundle,YES,,,"£1,532.80",2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Phrozen Sonic Mega 8K V2,YES,,,"£1,933.60",2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Phrozen Water-Washable Dental Model Resin,YES,,,£53.60,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Phrozen Gingiva Mask Resin,YES,,,£70.40,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Phrozen Dental Ortho Model Resin,YES,,,£86.40,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Phrozen TR300 Ultra High Temp Resin,YES,,,£45.60,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Phrozen Dental Study Model Resin,YES,,,£50.40,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Phrozen Wash+,YES,,,£500.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Phrozen Heat & Mix,YES,,,£160.00,2025-03-23 09:58:25,N/A,Delivery by end of March
+heygears,Phrozen Cure V2,YES,,,£266.40,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Phrozen Wash & Cure Kit,YES,,,£176.80,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Phrozen Post-Processing Kit,YES,,,£14.72,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,"Rodin Titan, 600g",YES,,,£399.00,2025-03-23 09:58:25,N/A,Stock available from 30th Jan
+heygears,"Rodin Sculpture 2.0, 600g",YES,,,£399.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,BASF Ultracur3D® RG 9400 B FR,YES,,,£188.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,BASF Ultracur3D® FL 300,YES,,,£113.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,BASF Ultracur3D® ST 80,YES,,,£71.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,BASF Ultracur3D® ST 45,YES,,,£88.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,BASF Ultracur3D® RG 3280,YES,,,£267.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,BASF Ultracur3D® RG 35 B,YES,,,£96.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,BASF Ultracur3D® RG 1100 B,YES,,,£104.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,HeyGears UltraCraft Reflex,YES,,,£974.70,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,HeyGears UltraCraft Reflex RS,YES,,,£719.10,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,UltraCraft Cure,YES,,,£584.10,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,UltraCraft Wash,YES,,,£277.20,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,UltraPrint-Modeling PAS10 Standard Modeling Resin,YES,,,£24.30,2025-03-23 09:58:25,N/A,For Reflex and RS
+heygears,UltraPrint-Modeling PAWW10 Water Washable Resin,YES,,,£43.20,2025-03-23 09:58:25,N/A,For Reflex and RS
+heygears,UltraPrint-Modeling PAU10 ABS-like Resin,YES,,,£53.10,2025-03-23 09:58:25,N/A,For Reflex only
+heygears,UltraPrint-Modeling PARP10 Rapid Prototyping Resin,YES,,,£35.10,2025-03-23 09:58:25,N/A,For Reflex and RS
+heygears,UltraPrint-Modeling PAT10 Transparent Resin,YES,,,£71.10,2025-03-23 09:58:25,N/A,For Reflex only
+heygears,UltraPrint-Production PAP10 Precise Detail Resin,YES,,,£52.20,2025-03-23 09:58:25,N/A,For Reflex and RS
+heygears,UltraPrint-Production PAWR10 Wear-Resistant Resin,YES,,,£52.20,2025-03-23 09:58:25,N/A,For Reflex and RS
+heygears,UltraPrint-Molding PAH10 High-Temperature Resistance Resin,YES,,,£79.20,2025-03-23 09:58:25,N/A,For Reflex only
+heygears,UltraPrint-Casting PAC10 Wax Casting Resin,YES,,,£194.40,2025-03-23 09:58:25,N/A,For Reflex only
+heygears,LCD Screen Tape for Reflex Series,YES,,,£8.10,2025-03-23 09:58:25,N/A,15% off when added to cart
+heygears,Reflex Temperature and Liquid Level Sensor,YES,,,£44.10,2025-03-23 09:58:25,N/A,15% off when added to cart
+heygears,UltraCraft Wash - Washing Box,YES,,,£71.10,2025-03-23 09:58:25,N/A,15% off when added to cart
+forward-am,Asiga Ultra 3D Printer,YES,,,"£11,917.00",2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Asiga Max 2 3D Printer,YES,,,"£7,917.00",2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Asiga PRO 4K 3D Printer,YES,,,"£21,000.00",2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Asiga MAX X 3D Printer,YES,,,"£7,917.00",2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Asiga Max LIFT Build Tray,YES,,,£471.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Asiga 1L Max Low Force Build Tray,YES,,,£83.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Asiga Pro 4K Build Platform,YES,,,£713.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,"DentaTRY, 1kg Bottle",YES,,,£143.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,"DentaGUIDE, 1kg Bottle",YES,,,£143.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,"DentaIBT, 1kg Bottle",YES,,,£143.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,"DentaTRAY, 1kg Bottle",YES,,,£143.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,"DentaBASE N1, 1kg Bottle",YES,,,£205.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,"DentaMODEL, 1kg Bottle",YES,,,£143.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,"DentaGUM, 1kg Bottle",YES,,,£143.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,"FusionGRAY V2, 1Kg Bottle",YES,,,£217.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,"DentaSTUDY, 1kg Bottle",YES,,,£143.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,"DentaFORM, 1kg Bottle",YES,,,£104.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,"DentaCAST, 1kg Bottle",YES,,,£143.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,"DentaTOOTH, 1kg Bottle",YES,,,£287.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Phrozen Heat & Mix,YES,,,£160.00,2025-03-23 09:58:25,N/A,Delivery by end of March
+forward-am,Phrozen Sonic Mighty Revo 14K,YES,,,£633.60,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Phrozen Sonic Mega 8K V2,YES,,,"£1,933.60",2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Phrozen Sonic Mega 8K V2 Bundle,YES,,,"£2,400.00",2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Phrozen Sonic Mega 8K S,YES,,,"£1,033.60",2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Phrozen Sonic Mega 8K S Bundle,YES,,,"£1,532.80",2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Phrozen Sonic Mini 8K S,YES,,,£250.40,2025-03-23 09:58:25,N/A,Delivery by 25th March
+forward-am,Phrozen Sonic Mighty 8K,YES,,,£400.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Phrozen Lumii DLP,YES,,,"£2,066.40",2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Phrozen Sonic XL 4K Plus,YES,,,"£2,333.60",2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Phrozen Sonic XL 4K Plus Bundle,YES,,,"£3,280.00",2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Phrozen Elastomer EL400 Gray Resin,YES,,,£106.40,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Phrozen RPG 3D Printing Resin,YES,,,£36.80,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Phrozen Aqua Hyperfine 3D Printing Resin,YES,,,£35.20,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Phrozen ABS-Like Resin,YES,,,£30.40,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Phrozen Aqua Clear Plus Resin,YES,,,£32.80,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Phrozen Flame Retardant Resin FR940,YES,,,£80.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Phrozen Ceramic White Resin,YES,,,£75.20,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Phrozen Water-Washable Dental Model Resin,YES,,,£53.60,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Phrozen Gingiva Mask Resin,YES,,,£70.40,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Phrozen Dental Study Model Resin,YES,,,£50.40,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,HeyGears UltraCraft ChairSide Pro Combo,YES,,,"£7,500.00",2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,HeyGears UltraCraft ChairSide Combo,YES,,,"£7,500.00",2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,UltraCraft AirCure,YES,,,"£1,667.00",2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,UltraCraft AirWash,YES,,,"£1,667.00",2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,ChairSide Resin Pour Tank - Universal,YES,,,£41.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Standard Platform for ChairSide - 5pcs/set,YES,,,£13.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,"Mini platform for Chairside printer, set of 10pcs",YES,,,£21.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Mini platform adapter for UltraCraft ChairSide printer,YES,,,£33.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,F2-D Resin Tank,YES,,,£250.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,F2-D Building Platform,YES,,,£200.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,"UltraPrint-Dental Temp for Try-in, Capsule and Bottle - Out of stock",YES,,,Out of stock,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,"UltraPrint-Dental Study Model UV, Capsule",YES,,,£54.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,"UltraPrint-Dental Cast UV 3.0, 1kg bottle",YES,,,£208.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,"UltraPrint-Dental Gingiva UV 2.0, 500g",YES,,,£150.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,UltraPrint-Dental Tray UV 2.0,YES,,,£146.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,"KeyGuard, 1kg - Out of stock",YES,,,Out of stock,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,"KeyOrthoModel, 1kg",YES,,,£151.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,"KeyCast, 1kg",YES,,,£207.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,KeyOrtho IBT,YES,,,£311.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,KeyDenture Try-In,YES,,,£259.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,"KeyTray, 1kg",YES,,,£245.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,KeySplint Hard,YES,,,£442.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,"KeyMask, 0.5kg",YES,,,£182.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,"KeyGuide, 1kg",YES,,,£250.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,"KeySplint Soft, 1kg",YES,,,£442.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Saremco print Cleaning Concentrate,YES,,,£104.00,2025-03-23 09:58:25,N/A,New
+forward-am,"Saremco print CROWNTEC, 0.5kg",YES,,,£554.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,"Saremco print DENTURETEC, 0.5kg",YES,,,£238.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Otoflash G171-6  With protective Gas Port,YES,,,"£2,667.00",2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Otoflash G171-2,YES,,,"£2,267.00",2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,LOCTITE 3D IND147,YES,,,£267.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,LOCTITE 3D IND249,YES,,,£267.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,LOCTITE 3D IND402,YES,,,£258.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,LOCTITE 3D IND403,YES,,,£242.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,LOCTITE 3D IND405,YES,,,£192.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,LOCTITE 3D IND406,YES,,,£242.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,LOCTITE 3D IND475,YES,,,£233.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,LOCTITE 3D 3172,YES,,,£192.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,LOCTITE 3D IND3380,YES,,,£363.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,LOCTITE 3D MED3394,YES,,,£433.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,LOCTITE 3D 3843,YES,,,£192.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,LOCTITE 3D 3860,YES,,,£233.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,LOCTITE 3D 3955,YES,,,£363.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,LOCTITE 3D IND5714,YES,,,£233.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,LOCTITE 3D IND6845,YES,,,£192.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,LOCTITE 3D 8195,YES,,,£76.68,2025-03-23 09:58:25,N/A,40% off
+forward-am,LOCTITE 3D PRO9274,YES,,,£100.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,LOCTITE 3D MED9851,YES,,,£433.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,LOCTITE EQ CL36 LED Curing Chamber,YES,,,"£6,250.00",2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Phrozen Lumii DLP,YES,,,"£2,066.40",2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Phrozen Sonic XL 4K Plus,YES,,,"£2,333.60",2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Phrozen Sonic XL 4K Plus Bundle,YES,,,"£3,280.00",2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Phrozen Sonic Mighty Revo 14K,YES,,,£633.60,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Phrozen Sonic Mini 8K S,YES,,,£250.40,2025-03-23 09:58:25,N/A,Delivery by 25th March
+forward-am,Phrozen Sonic Mighty 8K,YES,,,£400.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Phrozen Sonic Mega 8K S,YES,,,"£1,033.60",2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Phrozen Sonic Mega 8K S Bundle,YES,,,"£1,532.80",2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Phrozen Sonic Mega 8K V2,YES,,,"£1,933.60",2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Phrozen Water-Washable Dental Model Resin,YES,,,£53.60,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Phrozen Gingiva Mask Resin,YES,,,£70.40,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Phrozen Dental Ortho Model Resin,YES,,,£86.40,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Phrozen TR300 Ultra High Temp Resin,YES,,,£45.60,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Phrozen Dental Study Model Resin,YES,,,£50.40,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Phrozen Wash+,YES,,,£500.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Phrozen Heat & Mix,YES,,,£160.00,2025-03-23 09:58:25,N/A,Delivery by end of March
+forward-am,Phrozen Cure V2,YES,,,£266.40,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Phrozen Wash & Cure Kit,YES,,,£176.80,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Phrozen Post-Processing Kit,YES,,,£14.72,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,"Rodin Titan, 600g",YES,,,£399.00,2025-03-23 09:58:25,N/A,Stock available from 30th Jan
+forward-am,"Rodin Sculpture 2.0, 600g",YES,,,£399.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,BASF Ultracur3D® RG 9400 B FR,YES,,,£188.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,BASF Ultracur3D® FL 300,YES,,,£113.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,BASF Ultracur3D® ST 80,YES,,,£71.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,BASF Ultracur3D® ST 45,YES,,,£88.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,BASF Ultracur3D® RG 3280,YES,,,£267.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,BASF Ultracur3D® RG 35 B,YES,,,£96.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,BASF Ultracur3D® RG 1100 B,YES,,,£104.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,HeyGears UltraCraft Reflex,YES,,,£974.70,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,HeyGears UltraCraft Reflex RS,YES,,,£719.10,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,UltraCraft Cure,YES,,,£584.10,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,UltraCraft Wash,YES,,,£277.20,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,UltraPrint-Modeling PAS10 Standard Modeling Resin,YES,,,£24.30,2025-03-23 09:58:25,N/A,For Reflex and RS
+forward-am,UltraPrint-Modeling PAWW10 Water Washable Resin,YES,,,£43.20,2025-03-23 09:58:25,N/A,For Reflex and RS
+forward-am,UltraPrint-Modeling PAU10 ABS-like Resin,YES,,,£53.10,2025-03-23 09:58:25,N/A,For Reflex only
+forward-am,UltraPrint-Modeling PARP10 Rapid Prototyping Resin,YES,,,£35.10,2025-03-23 09:58:25,N/A,For Reflex and RS
+forward-am,UltraPrint-Modeling PAT10 Transparent Resin,YES,,,£71.10,2025-03-23 09:58:25,N/A,For Reflex only
+forward-am,UltraPrint-Production PAP10 Precise Detail Resin,YES,,,£52.20,2025-03-23 09:58:25,N/A,For Reflex and RS
+forward-am,UltraPrint-Production PAWR10 Wear-Resistant Resin,YES,,,£52.20,2025-03-23 09:58:25,N/A,For Reflex and RS
+forward-am,UltraPrint-Molding PAH10 High-Temperature Resistance Resin,YES,,,£79.20,2025-03-23 09:58:25,N/A,For Reflex only
+forward-am,UltraPrint-Casting PAC10 Wax Casting Resin,YES,,,£194.40,2025-03-23 09:58:25,N/A,For Reflex only
+forward-am,LCD Screen Tape for Reflex Series,YES,,,£8.10,2025-03-23 09:58:25,N/A,15% off when added to cart
+forward-am,Reflex Temperature and Liquid Level Sensor,YES,,,£44.10,2025-03-23 09:58:25,N/A,15% off when added to cart
+forward-am,UltraCraft Wash - Washing Box,YES,,,£71.10,2025-03-23 09:58:25,N/A,15% off when added to cart
+asiga,Asiga Ultra Endurance Build Trays - Option: 2L,YES,,,£79.00,2025-03-23 09:58:25,N/A,No Ribbon
+asiga,Asiga Ultra Endurance Build Trays - Option: 5L,YES,,,£113.00,2025-03-23 09:58:25,N/A,No Ribbon
+asiga,Asiga Max Universal Build Tray - Option: 1L,YES,,,£79.00,2025-03-23 09:58:25,N/A,No Ribbon
+asiga,Asiga Max Universal Build Tray - Option: 2L,YES,,,£113.00,2025-03-23 09:58:25,N/A,No Ribbon
+asiga,Asiga Max Universal Build Tray - Option: 5L,YES,,,£179.00,2025-03-23 09:58:25,N/A,No Ribbon
+asiga,Asiga Max Universal Build Tray - Option: 10L,YES,,,£240.00,2025-03-23 09:58:25,N/A,No Ribbon
+asiga,Asiga UltraGLOSS Build Tray - Option: Asiga Max UltraGLOSS Tray - 1L,YES,,,£96.00,2025-03-23 09:58:25,N/A,No Ribbon
+asiga,Asiga UltraGLOSS Build Tray - Option: Asiga Pro 4K UltraGLOSS Tray - 2L,YES,,,£100.00,2025-03-23 09:58:25,N/A,No Ribbon
+asiga,Asiga UltraGLOSS Build Tray - Option: Asiga Ultra UltraGLOSS Tray - 2L,YES,,,£96.00,2025-03-23 09:58:25,N/A,No Ribbon
+asiga,Pro 4K Low Force Build Tray - Option: 2L,YES,,,£83.00,2025-03-23 09:58:25,N/A,No Ribbon
+asiga,Pro 4K Low Force Build Tray - Option: 5L,YES,,,£108.00,2025-03-23 09:58:25,N/A,No Ribbon
+asiga,Pro 4K Low Force Build Tray - Option: 10L,YES,,,£179.00,2025-03-23 09:58:25,N/A,No Ribbon
+asiga,Asiga Build Tray Storage Case - Option: Max / Pico Build Tray Storage Case,YES,,,£28.00,2025-03-23 09:58:25,N/A,No Ribbon
+asiga,Asiga Build Tray Storage Case - Option: PRO 4K Build Tray Storage Case,YES,,,£63.00,2025-03-23 09:58:25,N/A,No Ribbon
+loctite,LOCTITE 3D Printing Cleaner - Option: Cleaner C,YES,,,£463.00,2025-03-23 09:58:25,N/A,No Ribbon
+loctite,LOCTITE 3D Printing Cleaner - Option: Cleaner T,YES,,,£488.00,2025-03-23 09:58:25,N/A,No Ribbon
+phrozen,Phrozen Castable Resin - Option: Green,YES,,,£121.00,2025-03-23 09:58:25,N/A,No Ribbon
+phrozen,Phrozen Castable Resin - Option: Violet,YES,,,£108.00,2025-03-23 09:58:25,N/A,No Ribbon
+phrozen,Phrozen Water-Washable Resin - Colour: Black,YES,,,£26.40,2025-03-23 09:58:25,N/A,No Ribbon
+phrozen,Phrozen LCD Screen Protector - Option: Sonic Mighty 8K/12K/Revo,YES,,,£12.60,2025-03-23 09:58:25,N/A,No Ribbon
+phrozen,Phrozen LCD Screen Protector - Option: Sonic Mega 8K / 8K S / 8K V2,YES,,,£15.00,2025-03-23 09:58:25,N/A,No Ribbon
+phrozen,Phrozen ACF Film (Pack of 3pcs) - Option: Mega 8K/290 x 450mm,YES,,,£100.00,2025-03-23 09:58:25,N/A,No Ribbon
+phrozen,Phrozen ACF Film (Pack of 3pcs) - Option: Mighty 8K/220 x 310mm,YES,,,£71.00,2025-03-23 09:58:25,N/A,No Ribbon
+phrozen,Phrozen ACF Film (Pack of 3pcs) - Option: Mini 8K/160 x 235mm,YES,,,£53.00,2025-03-23 09:58:25,N/A,No Ribbon
+phrozen,Phrozen PFA nFEP Film - Option: Sonic Mega 8K / 8K S / 8K V2,YES,,,£33.40,2025-03-23 09:58:25,N/A,No Ribbon
+phrozen,Phrozen PFA nFEP Film - Option: Sonic Mighty 8K/12K/Revo,YES,,,£20.00,2025-03-23 09:58:25,N/A,No Ribbon
+phrozen,Phrozen PFA nFEP Film - Option: A4 size (210x290mm) for all other models,YES,,,£16.60,2025-03-23 09:58:25,N/A,No Ribbon
+phrozen,Phrozen Aluminum Resin Vat - Option: Sonic Mighty 8K/12K/Revo,YES,,,£108.00,2025-03-23 09:58:25,N/A,No Ribbon
+phrozen,Phrozen Aluminum Resin Vat - Option: Sonic Mini 8K / Mini 8K S,YES,,,£88.00,2025-03-23 09:58:25,N/A,No Ribbon
+phrozen,Phrozen Aluminum Resin Vat - Option: Sonic Mega 8K,YES,,,£217.00,2025-03-23 09:58:25,N/A,No Ribbon
+phrozen,Phrozen Aluminum Resin Vat - Option: Sonic XL 4K 2022/PLUS & Mighty 4K,YES,,,£91.00,2025-03-23 09:58:25,N/A,No Ribbon
+phrozen,Phrozen Aluminum Resin Vat - Option: Sonic Mega 8K S,YES,,,£233.00,2025-03-23 09:58:25,N/A,No Ribbon
+phrozen,Phrozen Aluminum Resin Vat - Option: Lumii DLP Printer,YES,,,£96.00,2025-03-23 09:58:25,N/A,No Ribbon
+phrozen,Phrozen Aluminum Resin Vat - Option: Sonic 4K 2022 & Mini 4K,YES,,,£71.00,2025-03-23 09:58:25,N/A,No Ribbon
+phrozen,Phrozen LCD Module Screen - Option: Sonic Mighty Revo,YES,,,£146.00,2025-03-23 09:58:25,N/A,No Ribbon
+phrozen,Phrozen LCD Module Screen - Option: Sonic Mighty 8K,YES,,,£146.00,2025-03-23 09:58:25,N/A,No Ribbon
+phrozen,Phrozen LCD Module Screen - Option: Sonic Mighty 12K,YES,,,£146.00,2025-03-23 09:58:25,N/A,No Ribbon
+phrozen,Phrozen LCD Module Screen - Option: Sonic Mini 8K,YES,,,£129.00,2025-03-23 09:58:25,N/A,No Ribbon
+phrozen,Phrozen LCD Module Screen - Option: Sonic Mini 8K S,YES,,,£133.00,2025-03-23 09:58:25,N/A,No Ribbon
+phrozen,Phrozen LCD Module Screen - Option: Sonic Mega 8K & Mega 8K S,YES,,,£329.00,2025-03-23 09:58:25,N/A,No Ribbon
+phrozen,Phrozen LCD Module Screen - Option: Sonic XL 4K 2022/PLUS & Mighty 4K,YES,,,£125.00,2025-03-23 09:58:25,N/A,No Ribbon
+phrozen,Phrozen LCD Module Screen - Option: Sonic 4K 2022,YES,,,£113.00,2025-03-23 09:58:25,N/A,No Ribbon
+phrozen,Phrozen Build Plate - Option: Mega 8K,YES,,,£142.00,2025-03-23 09:58:25,N/A,No Ribbon
+phrozen,Phrozen Build Plate - Option: Mega 8K S,YES,,,£167.00,2025-03-23 09:58:25,N/A,No Ribbon
+phrozen,Phrozen Build Plate - Option: Mini 8K / Mini 8K S,YES,,,£74.00,2025-03-23 09:58:25,N/A,No Ribbon
+phrozen,Phrozen Build Plate - Option: Sonic Mighty 8K/12K,YES,,,£91.00,2025-03-23 09:58:25,N/A,No Ribbon
+phrozen,Phrozen Build Plate - Option: Sonic Mighty Revo,YES,,,£91.00,2025-03-23 09:58:25,N/A,No Ribbon
+phrozen,Phrozen Build Plate - Option: Sonic 4K 2022 & Mini 4K,YES,,,£67.00,2025-03-23 09:58:25,N/A,No Ribbon
+phrozen,Phrozen Build Plate - Option: Sonic XL 4K 2022 / Plus,YES,,,£100.00,2025-03-23 09:58:25,N/A,No Ribbon
+phrozen,Phrozen Build Plate - Option: Mighty 4K,YES,,,£91.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Asiga Ultra Endurance Build Trays - Option: 2L,YES,,,£79.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Asiga Ultra Endurance Build Trays - Option: 5L,YES,,,£113.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Asiga Max Universal Build Tray - Option: 1L,YES,,,£79.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Asiga Max Universal Build Tray - Option: 2L,YES,,,£113.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Asiga Max Universal Build Tray - Option: 5L,YES,,,£179.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Asiga Max Universal Build Tray - Option: 10L,YES,,,£240.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Asiga UltraGLOSS Build Tray - Option: Asiga Max UltraGLOSS Tray - 1L,YES,,,£96.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Asiga UltraGLOSS Build Tray - Option: Asiga Pro 4K UltraGLOSS Tray - 2L,YES,,,£100.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Asiga UltraGLOSS Build Tray - Option: Asiga Ultra UltraGLOSS Tray - 2L,YES,,,£96.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Pro 4K Low Force Build Tray - Option: 2L,YES,,,£83.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Pro 4K Low Force Build Tray - Option: 5L,YES,,,£108.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Pro 4K Low Force Build Tray - Option: 10L,YES,,,£179.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Asiga Build Tray Storage Case - Option: Max / Pico Build Tray Storage Case,YES,,,£28.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Asiga Build Tray Storage Case - Option: PRO 4K Build Tray Storage Case,YES,,,£63.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Phrozen Castable Resin - Option: Green,YES,,,£121.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Phrozen Castable Resin - Option: Violet,YES,,,£108.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,"UltraPrint-Dental Model HP UV 2.0, Capsule and Bottle - CapsulePrint - Sand",YES,,,£83.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,"UltraPrint-Dental Model HP UV 2.0, Capsule and Bottle - 1kg bottle - Sand",YES,,,£150.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,"UltraPrint-Dental Denture Try-in UV, Capsule and Bottle - A1 - Bottle",YES,,,£192.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,"UltraPrint-Dental Denture Try-in UV, Capsule and Bottle - A1 - CapsulePrint",YES,,,£96.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,"UltraPrint-Dental Denture Try-in UV, Capsule and Bottle - A2 - Bottle",YES,,,£192.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,"UltraPrint-Dental Denture Try-in UV, Capsule and Bottle - A2 - CapsulePrint",YES,,,£96.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,"UltraPrint-Dental Denture Try-in UV, Capsule and Bottle - B1 - Bottle",YES,,,£192.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,"UltraPrint-Dental Denture Try-in UV, Capsule and Bottle - B1 - CapsulePrint",YES,,,£96.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,"UltraPrint-Dental Denture Try-in UV, Capsule and Bottle - BL - Bottle",YES,,,£192.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,"UltraPrint-Dental Denture Try-in UV, Capsule and Bottle - BL - CapsulePrint",YES,,,£96.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,"UltraPrint-Dental Surgical Guide UV, Capsule and Bottle - Option: Bottle",YES,,,£125.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,"UltraPrint-Dental Surgical Guide UV, Capsule and Bottle - Option: CapsulePrint",YES,,,£74.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,UltraPrint-D Model E UV - 1kg - Grey,YES,,,£75.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,UltraPrint-D Model E UV - 1kg - Tan,YES,,,£75.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,UltraPrint-D Model E UV - 3kg - Grey,YES,,,£225.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,UltraPrint-D Model E UV - 3kg - Tan,YES,,,£225.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,UltraPrint-D Model E UV - 3kg - Sand,YES,,,£225.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,LOCTITE 3D Printing Cleaner - Option: Cleaner C,YES,,,£463.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,LOCTITE 3D Printing Cleaner - Option: Cleaner T,YES,,,£488.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Phrozen Castable Resin - Option: Green,YES,,,£121.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Phrozen Castable Resin - Option: Violet,YES,,,£108.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Phrozen LCD Module Screen - Option: Sonic Mighty Revo,YES,,,£146.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Phrozen LCD Module Screen - Option: Sonic Mighty 8K,YES,,,£146.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Phrozen LCD Module Screen - Option: Sonic Mighty 12K,YES,,,£146.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Phrozen LCD Module Screen - Option: Sonic Mini 8K,YES,,,£129.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Phrozen LCD Module Screen - Option: Sonic Mini 8K S,YES,,,£133.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Phrozen LCD Module Screen - Option: Sonic Mega 8K & Mega 8K S,YES,,,£329.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Phrozen LCD Module Screen - Option: Sonic XL 4K 2022/PLUS & Mighty 4K,YES,,,£125.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Phrozen LCD Module Screen - Option: Sonic 4K 2022,YES,,,£113.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Phrozen LCD Screen Protector - Option: Sonic Mighty 8K/12K/Revo,YES,,,£12.60,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Phrozen LCD Screen Protector - Option: Sonic Mega 8K / 8K S / 8K V2,YES,,,£15.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Reflex Combo - Option: UltraCraft Reflex + Pulsing Release Module,YES,,,"£1,583.00",2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Reflex Combo - Option: UltraCraft Reflex Combo,YES,,,"£1,999.00",2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Reflex Combo - Option: UltraCraft Reflex Combo + Pulse Release Module,YES,,,"£2,499.00",2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Reflex RS Combo - Option: Reflex RS + Pulsing Release Module,YES,,,"£1,358.00",2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Reflex RS Combo - Option: Reflex RS Combo,YES,,,"£1,750.00",2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Reflex RS Combo - Option: Reflex RS Combo + Pulsing Release Module,YES,,,"£2,316.00",2025-03-23 09:58:25,N/A,No Ribbon
+rodin,UltraCraft Pulsing Release Module - Option: Module Pack for Reflex,YES,,,£542.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,UltraCraft Pulsing Release Module - Option: Module Pack for Reflex RS,YES,,,£566.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Resin Tank for Reflex Series - Option: Reflex Resin Tank,YES,,,£79.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Resin Tank for Reflex Series - Option: Reflex Pulsing Release Resin Tank,YES,,,£138.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Resin Tank for Reflex Series - Option: Reflex RS Resin Tank,YES,,,£74.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Resin Tank for Reflex Series - Option: Reflex RS Heated & Pulsing Release Resin Tank,YES,,,£158.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Release Film Set for Reflex Series - Option: Reflex only,YES,,,£69.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Release Film Set for Reflex Series - Option: Reflex with Pulsing Release Module,YES,,,£89.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Release Film Set for Reflex Series - Option: Reflex RS only,YES,,,£59.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Release Film Set for Reflex Series - Option: Reflex RS with Pulsing Release Module,YES,,,£79.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,LCD screen for Reflex series - Option: UltraCraft Reflex,YES,,,£168.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,LCD screen for Reflex series - Option: UltraCraft Reflex RS,YES,,,£158.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,LCD Screen Protector for Reflex Series - Option: Tempered Glass Film Set for Reflex - 1 piece,YES,,,£9.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,LCD Screen Protector for Reflex Series - Option: LCD Screen Tempered Film for Reflex RS - 2 pcs,YES,,,£18.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Build Platform for Reflex Series - Option: UltraCraft Reflex,YES,,,£118.00,2025-03-23 09:58:25,N/A,No Ribbon
+rodin,Build Platform for Reflex Series - Option: UltraCraft Reflex RS,YES,,,£113.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Asiga Ultra Endurance Build Trays - Option: 2L,YES,,,£79.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Asiga Ultra Endurance Build Trays - Option: 5L,YES,,,£113.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Asiga Max Universal Build Tray - Option: 1L,YES,,,£79.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Asiga Max Universal Build Tray - Option: 2L,YES,,,£113.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Asiga Max Universal Build Tray - Option: 5L,YES,,,£179.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Asiga Max Universal Build Tray - Option: 10L,YES,,,£240.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Asiga UltraGLOSS Build Tray - Option: Asiga Max UltraGLOSS Tray - 1L,YES,,,£96.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Asiga UltraGLOSS Build Tray - Option: Asiga Pro 4K UltraGLOSS Tray - 2L,YES,,,£100.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Asiga UltraGLOSS Build Tray - Option: Asiga Ultra UltraGLOSS Tray - 2L,YES,,,£96.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Pro 4K Low Force Build Tray - Option: 2L,YES,,,£83.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Pro 4K Low Force Build Tray - Option: 5L,YES,,,£108.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Pro 4K Low Force Build Tray - Option: 10L,YES,,,£179.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Asiga Build Tray Storage Case - Option: Max / Pico Build Tray Storage Case,YES,,,£28.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Asiga Build Tray Storage Case - Option: PRO 4K Build Tray Storage Case,YES,,,£63.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Phrozen Castable Resin - Option: Green,YES,,,£121.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Phrozen Castable Resin - Option: Violet,YES,,,£108.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,"UltraPrint-Dental Model HP UV 2.0, Capsule and Bottle - CapsulePrint - Sand",YES,,,£83.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,"UltraPrint-Dental Model HP UV 2.0, Capsule and Bottle - 1kg bottle - Sand",YES,,,£150.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,"UltraPrint-Dental Denture Try-in UV, Capsule and Bottle - A1 - Bottle",YES,,,£192.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,"UltraPrint-Dental Denture Try-in UV, Capsule and Bottle - A1 - CapsulePrint",YES,,,£96.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,"UltraPrint-Dental Denture Try-in UV, Capsule and Bottle - A2 - Bottle",YES,,,£192.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,"UltraPrint-Dental Denture Try-in UV, Capsule and Bottle - A2 - CapsulePrint",YES,,,£96.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,"UltraPrint-Dental Denture Try-in UV, Capsule and Bottle - B1 - Bottle",YES,,,£192.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,"UltraPrint-Dental Denture Try-in UV, Capsule and Bottle - B1 - CapsulePrint",YES,,,£96.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,"UltraPrint-Dental Denture Try-in UV, Capsule and Bottle - BL - Bottle",YES,,,£192.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,"UltraPrint-Dental Denture Try-in UV, Capsule and Bottle - BL - CapsulePrint",YES,,,£96.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,"UltraPrint-Dental Surgical Guide UV, Capsule and Bottle - Option: Bottle",YES,,,£125.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,"UltraPrint-Dental Surgical Guide UV, Capsule and Bottle - Option: CapsulePrint",YES,,,£74.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,UltraPrint-D Model E UV - 1kg - Grey,YES,,,£75.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,UltraPrint-D Model E UV - 1kg - Tan,YES,,,£75.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,UltraPrint-D Model E UV - 3kg - Grey,YES,,,£225.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,UltraPrint-D Model E UV - 3kg - Tan,YES,,,£225.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,UltraPrint-D Model E UV - 3kg - Sand,YES,,,£225.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,LOCTITE 3D Printing Cleaner - Option: Cleaner C,YES,,,£463.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,LOCTITE 3D Printing Cleaner - Option: Cleaner T,YES,,,£488.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Phrozen Castable Resin - Option: Green,YES,,,£121.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Phrozen Castable Resin - Option: Violet,YES,,,£108.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Phrozen LCD Module Screen - Option: Sonic Mighty Revo,YES,,,£146.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Phrozen LCD Module Screen - Option: Sonic Mighty 8K,YES,,,£146.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Phrozen LCD Module Screen - Option: Sonic Mighty 12K,YES,,,£146.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Phrozen LCD Module Screen - Option: Sonic Mini 8K,YES,,,£129.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Phrozen LCD Module Screen - Option: Sonic Mini 8K S,YES,,,£133.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Phrozen LCD Module Screen - Option: Sonic Mega 8K & Mega 8K S,YES,,,£329.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Phrozen LCD Module Screen - Option: Sonic XL 4K 2022/PLUS & Mighty 4K,YES,,,£125.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Phrozen LCD Module Screen - Option: Sonic 4K 2022,YES,,,£113.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Phrozen LCD Screen Protector - Option: Sonic Mighty 8K/12K/Revo,YES,,,£12.60,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Phrozen LCD Screen Protector - Option: Sonic Mega 8K / 8K S / 8K V2,YES,,,£15.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Reflex Combo - Option: UltraCraft Reflex + Pulsing Release Module,YES,,,"£1,583.00",2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Reflex Combo - Option: UltraCraft Reflex Combo,YES,,,"£1,999.00",2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Reflex Combo - Option: UltraCraft Reflex Combo + Pulse Release Module,YES,,,"£2,499.00",2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Reflex RS Combo - Option: Reflex RS + Pulsing Release Module,YES,,,"£1,358.00",2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Reflex RS Combo - Option: Reflex RS Combo,YES,,,"£1,750.00",2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Reflex RS Combo - Option: Reflex RS Combo + Pulsing Release Module,YES,,,"£2,316.00",2025-03-23 09:58:25,N/A,No Ribbon
+heygears,UltraCraft Pulsing Release Module - Option: Module Pack for Reflex,YES,,,£542.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,UltraCraft Pulsing Release Module - Option: Module Pack for Reflex RS,YES,,,£566.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Resin Tank for Reflex Series - Option: Reflex Resin Tank,YES,,,£79.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Resin Tank for Reflex Series - Option: Reflex Pulsing Release Resin Tank,YES,,,£138.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Resin Tank for Reflex Series - Option: Reflex RS Resin Tank,YES,,,£74.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Resin Tank for Reflex Series - Option: Reflex RS Heated & Pulsing Release Resin Tank,YES,,,£158.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Release Film Set for Reflex Series - Option: Reflex only,YES,,,£69.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Release Film Set for Reflex Series - Option: Reflex with Pulsing Release Module,YES,,,£89.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Release Film Set for Reflex Series - Option: Reflex RS only,YES,,,£59.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Release Film Set for Reflex Series - Option: Reflex RS with Pulsing Release Module,YES,,,£79.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,LCD screen for Reflex series - Option: UltraCraft Reflex,YES,,,£168.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,LCD screen for Reflex series - Option: UltraCraft Reflex RS,YES,,,£158.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,LCD Screen Protector for Reflex Series - Option: Tempered Glass Film Set for Reflex - 1 piece,YES,,,£9.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,LCD Screen Protector for Reflex Series - Option: LCD Screen Tempered Film for Reflex RS - 2 pcs,YES,,,£18.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Build Platform for Reflex Series - Option: UltraCraft Reflex,YES,,,£118.00,2025-03-23 09:58:25,N/A,No Ribbon
+heygears,Build Platform for Reflex Series - Option: UltraCraft Reflex RS,YES,,,£113.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Asiga Ultra Endurance Build Trays - Option: 2L,YES,,,£79.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Asiga Ultra Endurance Build Trays - Option: 5L,YES,,,£113.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Asiga Max Universal Build Tray - Option: 1L,YES,,,£79.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Asiga Max Universal Build Tray - Option: 2L,YES,,,£113.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Asiga Max Universal Build Tray - Option: 5L,YES,,,£179.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Asiga Max Universal Build Tray - Option: 10L,YES,,,£240.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Asiga UltraGLOSS Build Tray - Option: Asiga Max UltraGLOSS Tray - 1L,YES,,,£96.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Asiga UltraGLOSS Build Tray - Option: Asiga Pro 4K UltraGLOSS Tray - 2L,YES,,,£100.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Asiga UltraGLOSS Build Tray - Option: Asiga Ultra UltraGLOSS Tray - 2L,YES,,,£96.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Pro 4K Low Force Build Tray - Option: 2L,YES,,,£83.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Pro 4K Low Force Build Tray - Option: 5L,YES,,,£108.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Pro 4K Low Force Build Tray - Option: 10L,YES,,,£179.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Asiga Build Tray Storage Case - Option: Max / Pico Build Tray Storage Case,YES,,,£28.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Asiga Build Tray Storage Case - Option: PRO 4K Build Tray Storage Case,YES,,,£63.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Phrozen Castable Resin - Option: Green,YES,,,£121.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Phrozen Castable Resin - Option: Violet,YES,,,£108.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,"UltraPrint-Dental Model HP UV 2.0, Capsule and Bottle - CapsulePrint - Sand",YES,,,£83.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,"UltraPrint-Dental Model HP UV 2.0, Capsule and Bottle - 1kg bottle - Sand",YES,,,£150.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,"UltraPrint-Dental Denture Try-in UV, Capsule and Bottle - A1 - Bottle",YES,,,£192.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,"UltraPrint-Dental Denture Try-in UV, Capsule and Bottle - A1 - CapsulePrint",YES,,,£96.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,"UltraPrint-Dental Denture Try-in UV, Capsule and Bottle - A2 - Bottle",YES,,,£192.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,"UltraPrint-Dental Denture Try-in UV, Capsule and Bottle - A2 - CapsulePrint",YES,,,£96.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,"UltraPrint-Dental Denture Try-in UV, Capsule and Bottle - B1 - Bottle",YES,,,£192.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,"UltraPrint-Dental Denture Try-in UV, Capsule and Bottle - B1 - CapsulePrint",YES,,,£96.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,"UltraPrint-Dental Denture Try-in UV, Capsule and Bottle - BL - Bottle",YES,,,£192.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,"UltraPrint-Dental Denture Try-in UV, Capsule and Bottle - BL - CapsulePrint",YES,,,£96.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,"UltraPrint-Dental Surgical Guide UV, Capsule and Bottle - Option: Bottle",YES,,,£125.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,"UltraPrint-Dental Surgical Guide UV, Capsule and Bottle - Option: CapsulePrint",YES,,,£74.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,UltraPrint-D Model E UV - 1kg - Grey,YES,,,£75.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,UltraPrint-D Model E UV - 1kg - Tan,YES,,,£75.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,UltraPrint-D Model E UV - 3kg - Grey,YES,,,£225.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,UltraPrint-D Model E UV - 3kg - Tan,YES,,,£225.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,UltraPrint-D Model E UV - 3kg - Sand,YES,,,£225.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,LOCTITE 3D Printing Cleaner - Option: Cleaner C,YES,,,£463.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,LOCTITE 3D Printing Cleaner - Option: Cleaner T,YES,,,£488.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Phrozen Castable Resin - Option: Green,YES,,,£121.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Phrozen Castable Resin - Option: Violet,YES,,,£108.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Phrozen LCD Module Screen - Option: Sonic Mighty Revo,YES,,,£146.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Phrozen LCD Module Screen - Option: Sonic Mighty 8K,YES,,,£146.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Phrozen LCD Module Screen - Option: Sonic Mighty 12K,YES,,,£146.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Phrozen LCD Module Screen - Option: Sonic Mini 8K,YES,,,£129.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Phrozen LCD Module Screen - Option: Sonic Mini 8K S,YES,,,£133.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Phrozen LCD Module Screen - Option: Sonic Mega 8K & Mega 8K S,YES,,,£329.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Phrozen LCD Module Screen - Option: Sonic XL 4K 2022/PLUS & Mighty 4K,YES,,,£125.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Phrozen LCD Module Screen - Option: Sonic 4K 2022,YES,,,£113.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Phrozen LCD Screen Protector - Option: Sonic Mighty 8K/12K/Revo,YES,,,£12.60,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Phrozen LCD Screen Protector - Option: Sonic Mega 8K / 8K S / 8K V2,YES,,,£15.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Reflex Combo - Option: UltraCraft Reflex + Pulsing Release Module,YES,,,"£1,583.00",2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Reflex Combo - Option: UltraCraft Reflex Combo,YES,,,"£1,999.00",2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Reflex Combo - Option: UltraCraft Reflex Combo + Pulse Release Module,YES,,,"£2,499.00",2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Reflex RS Combo - Option: Reflex RS + Pulsing Release Module,YES,,,"£1,358.00",2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Reflex RS Combo - Option: Reflex RS Combo,YES,,,"£1,750.00",2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Reflex RS Combo - Option: Reflex RS Combo + Pulsing Release Module,YES,,,"£2,316.00",2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,UltraCraft Pulsing Release Module - Option: Module Pack for Reflex,YES,,,£542.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,UltraCraft Pulsing Release Module - Option: Module Pack for Reflex RS,YES,,,£566.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Resin Tank for Reflex Series - Option: Reflex Resin Tank,YES,,,£79.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Resin Tank for Reflex Series - Option: Reflex Pulsing Release Resin Tank,YES,,,£138.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Resin Tank for Reflex Series - Option: Reflex RS Resin Tank,YES,,,£74.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Resin Tank for Reflex Series - Option: Reflex RS Heated & Pulsing Release Resin Tank,YES,,,£158.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Release Film Set for Reflex Series - Option: Reflex only,YES,,,£69.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Release Film Set for Reflex Series - Option: Reflex with Pulsing Release Module,YES,,,£89.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Release Film Set for Reflex Series - Option: Reflex RS only,YES,,,£59.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Release Film Set for Reflex Series - Option: Reflex RS with Pulsing Release Module,YES,,,£79.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,LCD screen for Reflex series - Option: UltraCraft Reflex,YES,,,£168.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,LCD screen for Reflex series - Option: UltraCraft Reflex RS,YES,,,£158.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,LCD Screen Protector for Reflex Series - Option: Tempered Glass Film Set for Reflex - 1 piece,YES,,,£9.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,LCD Screen Protector for Reflex Series - Option: LCD Screen Tempered Film for Reflex RS - 2 pcs,YES,,,£18.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Build Platform for Reflex Series - Option: UltraCraft Reflex,YES,,,£118.00,2025-03-23 09:58:25,N/A,No Ribbon
+forward-am,Build Platform for Reflex Series - Option: UltraCraft Reflex RS,YES,,,£113.00,2025-03-23 09:58:25,N/A,No Ribbon
